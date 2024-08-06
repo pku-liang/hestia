@@ -1,0 +1,379 @@
+{
+  "constants": [
+    {
+      "name": "op_9",
+      "operands": "0",
+      "type": "i32"
+    },
+    {
+      "name": "op_8",
+      "operands": "493",
+      "type": "i32"
+    },
+    {
+      "name": "op_7",
+      "operands": "494",
+      "type": "i32"
+    },
+    {
+      "name": "op_6",
+      "operands": "0",
+      "type": "i32"
+    },
+    {
+      "name": "op_5",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "new_constant_0",
+      "operands": "0.000000",
+      "type": "f64"
+    }
+  ],
+  "level": "tor",
+  "memory": [
+    {
+      "name": "op_0",
+      "size": 1666,
+      "type": "f64"
+    },
+    {
+      "name": "op_1",
+      "size": 1666,
+      "type": "i32"
+    },
+    {
+      "name": "op_2",
+      "size": 495,
+      "type": "i32"
+    },
+    {
+      "name": "op_3",
+      "size": 494,
+      "type": "f64"
+    },
+    {
+      "name": "op_4",
+      "size": 494,
+      "type": "f64"
+    }
+  ],
+  "modules": [
+    {
+      "args": [
+        "new_0_0",
+        "new_0_1",
+        "new_0_2"
+      ],
+      "body": [
+        {
+          "body": [
+            {
+              "end": 8,
+              "name": "op_17",
+              "op_type": "sub",
+              "operands": [
+                "op_28_0",
+                "new_0_0"
+              ],
+              "start": 7,
+              "type": "i32"
+            },
+            {
+              "end": 8,
+              "name": "op_19",
+              "op_type": "add",
+              "operands": [
+                "op_17",
+                "new_0_0"
+              ],
+              "start": 7,
+              "type": "i32"
+            },
+            {
+              "end": 10,
+              "index": "op_19",
+              "memory": "op_0",
+              "name": "op_21",
+              "op_type": "load",
+              "start": 9
+            },
+            {
+              "end": 9,
+              "index": "op_19",
+              "memory": "op_1",
+              "name": "op_22",
+              "op_type": "load",
+              "start": 8
+            },
+            {
+              "end": 10,
+              "index": "op_22",
+              "memory": "op_3",
+              "name": "op_24",
+              "op_type": "load",
+              "start": 9
+            },
+            {
+              "end": 11,
+              "name": "op_25",
+              "op_type": "mul",
+              "operands": [
+                "op_21",
+                "op_24"
+              ],
+              "start": 10,
+              "type": "f64"
+            },
+            {
+              "end": 12,
+              "name": "op_26",
+              "op_type": "add",
+              "operands": [
+                "op_28_1",
+                "op_25"
+              ],
+              "start": 11,
+              "type": "f64"
+            },
+            {
+              "jump": 6,
+              "op_type": "yield",
+              "operands": [
+                "op_26"
+              ],
+              "time": 12
+            }
+          ],
+          "end": 12,
+          "iter_args": [
+            "op_28_1"
+          ],
+          "iter_inits": [
+            "new_constant_0"
+          ],
+          "iter_name": "op_28_0",
+          "lb": "new_0_0",
+          "names": [
+            "op_28"
+          ],
+          "op_type": "for",
+          "start": 6,
+          "step": "new_0_2",
+          "ub": "new_0_1"
+        },
+        {
+          "op_type": "return",
+          "operands": [
+            "op_28"
+          ],
+          "time": 13
+        }
+      ],
+      "graph": {
+        "edge": [
+          {
+            "from": 6,
+            "to": 7,
+            "type": "static"
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "type": "static:1"
+          },
+          {
+            "from": 8,
+            "to": 9,
+            "type": "static:1"
+          },
+          {
+            "from": 9,
+            "to": 10,
+            "type": "static:1"
+          },
+          {
+            "from": 10,
+            "to": 11,
+            "type": "static:9"
+          },
+          {
+            "from": 11,
+            "to": 12,
+            "type": "static:13"
+          },
+          {
+            "II": 14,
+            "from": 6,
+            "pipeline": 1,
+            "to": 13,
+            "type": "static-for"
+          }
+        ],
+        "end": 13,
+        "start": 6
+      },
+      "name": "outline_0",
+      "ret_types": [],
+      "return_vals": [],
+      "strategy": "pipeline for 14",
+      "types": [
+        "i32",
+        "i32",
+        "i32"
+      ]
+    },
+    {
+      "args": [],
+      "body": [
+        {
+          "body": [
+            {
+              "end": 3,
+              "index": "op_31",
+              "memory": "op_2",
+              "name": "op_11",
+              "op_type": "load",
+              "start": 2
+            },
+            {
+              "end": 3,
+              "name": "op_12",
+              "op_type": "add",
+              "operands": [
+                "op_31",
+                "op_5"
+              ],
+              "start": 2,
+              "type": "i32"
+            },
+            {
+              "end": 4,
+              "index": "op_12",
+              "memory": "op_2",
+              "name": "op_13",
+              "op_type": "load",
+              "start": 3
+            },
+            {
+              "end": 5,
+              "name": "op_15",
+              "op_type": "sub",
+              "operands": [
+                "op_13",
+                "op_5"
+              ],
+              "start": 4,
+              "type": "i32"
+            },
+            {
+              "end": 13,
+              "function": "outline_0",
+              "names": [
+                "call_1"
+              ],
+              "op_type": "call",
+              "operands": [
+                "op_11",
+                "op_15",
+                "op_5"
+              ],
+              "start": 6
+            },
+            {
+              "end": 15,
+              "index": "op_31",
+              "memory": "op_4",
+              "op_type": "store",
+              "start": 14,
+              "value": "call_1"
+            },
+            {
+              "jump": 1,
+              "op_type": "yield",
+              "operands": [],
+              "time": 15
+            }
+          ],
+          "end": 15,
+          "iter_args": [],
+          "iter_inits": [],
+          "iter_name": "op_31",
+          "lb": "op_6",
+          "names": [],
+          "op_type": "for",
+          "start": 1,
+          "step": "op_5",
+          "ub": "op_8"
+        },
+        {
+          "op_type": "return",
+          "operands": [],
+          "time": 16
+        }
+      ],
+      "graph": {
+        "edge": [
+          {
+            "from": 0,
+            "to": 1,
+            "type": "static"
+          },
+          {
+            "from": 1,
+            "to": 2,
+            "type": "static"
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "type": "static:1"
+          },
+          {
+            "from": 3,
+            "to": 4,
+            "type": "static:1"
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "type": "static:1"
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "type": "static"
+          },
+          {
+            "from": 6,
+            "to": 13,
+            "type": "static-call"
+          },
+          {
+            "from": 13,
+            "to": 14,
+            "type": "static"
+          },
+          {
+            "from": 14,
+            "to": 15,
+            "type": "static:1"
+          },
+          {
+            "from": 1,
+            "to": 16,
+            "type": "static-for"
+          }
+        ],
+        "end": 16,
+        "start": 0
+      },
+      "name": "main",
+      "ret_types": [],
+      "return_vals": [],
+      "strategy": "static",
+      "types": []
+    }
+  ]
+}

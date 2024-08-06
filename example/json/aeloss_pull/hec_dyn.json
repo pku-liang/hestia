@@ -1,0 +1,1453 @@
+{
+  "constants": [
+    {
+      "name": "op_15",
+      "operands": "10.234000",
+      "type": "f64"
+    },
+    {
+      "name": "op_14",
+      "operands": "0.000000",
+      "type": "f64"
+    },
+    {
+      "name": "op_13",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_12",
+      "operands": "1.000000",
+      "type": "f64"
+    },
+    {
+      "name": "op_11",
+      "operands": "0.097714",
+      "type": "f64"
+    },
+    {
+      "name": "op_10",
+      "operands": "0.500000",
+      "type": "f64"
+    },
+    {
+      "name": "op_9",
+      "operands": "0.000400",
+      "type": "f64"
+    },
+    {
+      "name": "op_8",
+      "operands": "0",
+      "type": "i32"
+    },
+    {
+      "name": "op_7",
+      "operands": "0",
+      "type": "bool"
+    },
+    {
+      "name": "op_6",
+      "operands": "0",
+      "type": "i32"
+    },
+    {
+      "name": "op_5",
+      "operands": "1023",
+      "type": "i32"
+    },
+    {
+      "name": "op_4",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "new_constant_0",
+      "operands": "9.234000",
+      "type": "f64"
+    },
+    {
+      "name": "new_constant_1",
+      "operands": "94.500756",
+      "type": "f64"
+    }
+  ],
+  "level": "hec",
+  "memory": [],
+  "modules": [
+    {
+      "args": [
+        "in",
+        "out0",
+        "out"
+      ],
+      "graph": [
+        {
+          "dst": "b_7.dataIn",
+          "op_type": "assign",
+          "src": "buf_6.dataOut"
+        },
+        {
+          "dst": "buf_6.dataIn",
+          "op_type": "assign",
+          "src": "m_5.dataOut"
+        },
+        {
+          "dst": "b_7.condition",
+          "op_type": "assign",
+          "src": "f_45.dataOut.4"
+        },
+        {
+          "dst": "m_5.dataIn.0",
+          "op_type": "assign",
+          "src": "in"
+        },
+        {
+          "dst": "b_10.dataIn",
+          "op_type": "assign",
+          "src": "buf_9.dataOut"
+        },
+        {
+          "dst": "buf_9.dataIn",
+          "op_type": "assign",
+          "src": "m_8.dataOut"
+        },
+        {
+          "dst": "b_10.condition",
+          "op_type": "assign",
+          "src": "f_45.dataOut.3"
+        },
+        {
+          "dst": "const_11.control",
+          "op_type": "assign",
+          "src": "in"
+        },
+        {
+          "dst": "const_11.dataIn",
+          "op_type": "assign",
+          "src": "op_14"
+        },
+        {
+          "dst": "m_8.dataIn.0",
+          "op_type": "assign",
+          "src": "const_11.dataOut"
+        },
+        {
+          "dst": "m_8.condition",
+          "op_type": "assign",
+          "src": "f_46.dataOut.3"
+        },
+        {
+          "dst": "const_12.control",
+          "op_type": "assign",
+          "src": "in"
+        },
+        {
+          "dst": "const_12.dataIn",
+          "op_type": "assign",
+          "src": "op_6"
+        },
+        {
+          "dst": "b_15.dataIn",
+          "op_type": "assign",
+          "src": "f_48.dataOut.1"
+        },
+        {
+          "dst": "buf_14.dataIn",
+          "op_type": "assign",
+          "src": "m_13.dataOut"
+        },
+        {
+          "dst": "b_15.condition",
+          "op_type": "assign",
+          "src": "f_45.dataOut.2"
+        },
+        {
+          "dst": "const_16.control",
+          "op_type": "assign",
+          "src": "in"
+        },
+        {
+          "dst": "const_16.dataIn",
+          "op_type": "assign",
+          "src": "op_5"
+        },
+        {
+          "dst": "m_13.dataIn.0",
+          "op_type": "assign",
+          "src": "const_16.dataOut"
+        },
+        {
+          "dst": "m_13.dataIn.1",
+          "op_type": "assign",
+          "src": "b_15.dataOut.0"
+        },
+        {
+          "dst": "m_13.condition",
+          "op_type": "assign",
+          "src": "f_46.dataOut.2"
+        },
+        {
+          "dst": "b_19.dataIn",
+          "op_type": "assign",
+          "src": "buf_18.dataOut"
+        },
+        {
+          "dst": "buf_18.dataIn",
+          "op_type": "assign",
+          "src": "m_17.dataOut"
+        },
+        {
+          "dst": "b_19.condition",
+          "op_type": "assign",
+          "src": "f_45.dataOut.1"
+        },
+        {
+          "dst": "const_20.control",
+          "op_type": "assign",
+          "src": "in"
+        },
+        {
+          "dst": "const_20.dataIn",
+          "op_type": "assign",
+          "src": "op_4"
+        },
+        {
+          "dst": "m_17.dataIn.0",
+          "op_type": "assign",
+          "src": "const_20.dataOut"
+        },
+        {
+          "dst": "m_17.dataIn.1",
+          "op_type": "assign",
+          "src": "f_49.dataOut.1"
+        },
+        {
+          "dst": "m_17.condition",
+          "op_type": "assign",
+          "src": "f_46.dataOut.1"
+        },
+        {
+          "dst": "buf_22.dataIn",
+          "op_type": "assign",
+          "src": "m_21.dataOut"
+        },
+        {
+          "dst": "m_21.dataIn.0",
+          "op_type": "assign",
+          "src": "const_12.dataOut"
+        },
+        {
+          "dst": "cmpi_sle_4.operand0",
+          "op_type": "assign",
+          "src": "f_50.dataOut.1"
+        },
+        {
+          "dst": "cmpi_sle_4.operand1",
+          "op_type": "assign",
+          "src": "f_48.dataOut.0"
+        },
+        {
+          "dst": "b_23.condition",
+          "op_type": "assign",
+          "src": "f_45.dataOut.0"
+        },
+        {
+          "dst": "b_23.dataIn",
+          "op_type": "assign",
+          "src": "f_50.dataOut.0"
+        },
+        {
+          "dst": "addi_24.operand0",
+          "op_type": "assign",
+          "src": "f_51.dataOut.4"
+        },
+        {
+          "dst": "addi_24.operand1",
+          "op_type": "assign",
+          "src": "f_49.dataOut.0"
+        },
+        {
+          "dst": "m_21.dataIn.1",
+          "op_type": "assign",
+          "src": "addi_24.result"
+        },
+        {
+          "dst": "m_21.condition",
+          "op_type": "assign",
+          "src": "f_46.dataOut.0"
+        },
+        {
+          "dst": "load_25.address_in",
+          "op_type": "assign",
+          "src": "f_51.dataOut.3"
+        },
+        {
+          "dst": "load_25.control",
+          "op_type": "assign",
+          "src": "f_47.dataOut.7"
+        },
+        {
+          "dst": "mem_0.load_address.0",
+          "op_type": "assign",
+          "src": "load_25.address_out"
+        },
+        {
+          "dst": "load_25.data_in",
+          "op_type": "assign",
+          "src": "mem_0.load_data.0"
+        },
+        {
+          "dst": "load_26.address_in",
+          "op_type": "assign",
+          "src": "f_51.dataOut.2"
+        },
+        {
+          "dst": "load_26.control",
+          "op_type": "assign",
+          "src": "f_47.dataOut.6"
+        },
+        {
+          "dst": "mem_1.load_address.0",
+          "op_type": "assign",
+          "src": "load_26.address_out"
+        },
+        {
+          "dst": "load_26.data_in",
+          "op_type": "assign",
+          "src": "mem_1.load_data.0"
+        },
+        {
+          "dst": "const_29.control",
+          "op_type": "assign",
+          "src": "f_47.dataOut.5"
+        },
+        {
+          "dst": "const_29.dataIn",
+          "op_type": "assign",
+          "src": "op_10"
+        },
+        {
+          "dst": "store_30.data_in",
+          "op_type": "assign",
+          "src": "f_54.dataOut.2"
+        },
+        {
+          "dst": "mem_2.store_address.0",
+          "op_type": "assign",
+          "src": "store_30.address_out"
+        },
+        {
+          "dst": "mem_2.store_data.0",
+          "op_type": "assign",
+          "src": "store_30.data_out"
+        },
+        {
+          "dst": "const_37.control",
+          "op_type": "assign",
+          "src": "f_47.dataOut.3"
+        },
+        {
+          "dst": "const_37.dataIn",
+          "op_type": "assign",
+          "src": "op_11"
+        },
+        {
+          "dst": "load_38.address_in",
+          "op_type": "assign",
+          "src": "f_51.dataOut.0"
+        },
+        {
+          "dst": "load_38.control",
+          "op_type": "assign",
+          "src": "f_47.dataOut.2"
+        },
+        {
+          "dst": "mem_3.load_address.0",
+          "op_type": "assign",
+          "src": "load_38.address_out"
+        },
+        {
+          "dst": "load_38.data_in",
+          "op_type": "assign",
+          "src": "mem_3.load_data.0"
+        },
+        {
+          "dst": "trunci_39.operand",
+          "op_type": "assign",
+          "src": "load_38.data_out"
+        },
+        {
+          "dst": "b_40.condition",
+          "op_type": "assign",
+          "src": "f_57.dataOut.3"
+        },
+        {
+          "dst": "b_40.dataIn",
+          "op_type": "assign",
+          "src": "f_47.dataOut.1"
+        },
+        {
+          "dst": "b_41.condition",
+          "op_type": "assign",
+          "src": "f_57.dataOut.2"
+        },
+        {
+          "dst": "b_41.dataIn",
+          "op_type": "assign",
+          "src": "b_10.dataOut.0"
+        },
+        {
+          "dst": "b_42.dataIn",
+          "op_type": "assign",
+          "src": "mulf_36.result"
+        },
+        {
+          "dst": "m_43.condition",
+          "op_type": "assign",
+          "src": "f_57.dataOut.0"
+        },
+        {
+          "dst": "m_43.dataIn.1",
+          "op_type": "assign",
+          "src": "addf_44.result"
+        },
+        {
+          "dst": "m_43.dataIn.0",
+          "op_type": "assign",
+          "src": "b_41.dataOut.1"
+        },
+        {
+          "dst": "m_8.dataIn.1",
+          "op_type": "assign",
+          "src": "m_43.dataOut"
+        },
+        {
+          "dst": "m_5.dataIn.1",
+          "op_type": "assign",
+          "src": "f_47.dataOut.0"
+        },
+        {
+          "dst": "out0",
+          "op_type": "assign",
+          "src": "b_10.dataOut.1"
+        },
+        {
+          "dst": "f_45.dataIn",
+          "op_type": "assign",
+          "src": "cmpi_sle_4.result"
+        },
+        {
+          "dst": "f_46.dataIn",
+          "op_type": "assign",
+          "src": "m_5.condition"
+        },
+        {
+          "dst": "f_47.dataIn",
+          "op_type": "assign",
+          "src": "b_7.dataOut.0"
+        },
+        {
+          "dst": "f_48.dataIn",
+          "op_type": "assign",
+          "src": "buf_14.dataOut"
+        },
+        {
+          "dst": "f_49.dataIn",
+          "op_type": "assign",
+          "src": "b_19.dataOut.0"
+        },
+        {
+          "dst": "f_50.dataIn",
+          "op_type": "assign",
+          "src": "buf_22.dataOut"
+        },
+        {
+          "dst": "f_51.dataIn",
+          "op_type": "assign",
+          "src": "b_23.dataOut.0"
+        },
+        {
+          "dst": "f_52.dataIn",
+          "op_type": "assign",
+          "src": "load_25.data_out"
+        },
+        {
+          "dst": "f_53.dataIn",
+          "op_type": "assign",
+          "src": "load_26.data_out"
+        },
+        {
+          "dst": "f_54.dataIn",
+          "op_type": "assign",
+          "src": "mulf_28.result"
+        },
+        {
+          "dst": "f_55.dataIn",
+          "op_type": "assign",
+          "src": "subf_31.result"
+        },
+        {
+          "dst": "f_56.dataIn",
+          "op_type": "assign",
+          "src": "subf_32.result"
+        },
+        {
+          "dst": "f_57.dataIn",
+          "op_type": "assign",
+          "src": "trunci_39.result"
+        },
+        {
+          "dst": "fifo_58.dataIn",
+          "op_type": "assign",
+          "src": "f_52.dataOut.1"
+        },
+        {
+          "dst": "addf_27.operand0",
+          "op_type": "assign",
+          "src": "fifo_58.dataOut"
+        },
+        {
+          "dst": "fifo_59.dataIn",
+          "op_type": "assign",
+          "src": "f_53.dataOut.1"
+        },
+        {
+          "dst": "addf_27.operand1",
+          "op_type": "assign",
+          "src": "fifo_59.dataOut"
+        },
+        {
+          "dst": "fifo_60.dataIn",
+          "op_type": "assign",
+          "src": "f_51.dataOut.1"
+        },
+        {
+          "dst": "store_30.address_in",
+          "op_type": "assign",
+          "src": "fifo_60.dataOut"
+        },
+        {
+          "dst": "fifo_61.dataIn",
+          "op_type": "assign",
+          "src": "f_47.dataOut.4"
+        },
+        {
+          "dst": "store_30.control",
+          "op_type": "assign",
+          "src": "fifo_61.dataOut"
+        },
+        {
+          "dst": "fifo_62.dataIn",
+          "op_type": "assign",
+          "src": "f_52.dataOut.0"
+        },
+        {
+          "dst": "subf_31.operand0",
+          "op_type": "assign",
+          "src": "fifo_62.dataOut"
+        },
+        {
+          "dst": "fifo_63.dataIn",
+          "op_type": "assign",
+          "src": "f_54.dataOut.1"
+        },
+        {
+          "dst": "subf_31.operand1",
+          "op_type": "assign",
+          "src": "fifo_63.dataOut"
+        },
+        {
+          "dst": "fifo_64.dataIn",
+          "op_type": "assign",
+          "src": "f_53.dataOut.0"
+        },
+        {
+          "dst": "subf_32.operand0",
+          "op_type": "assign",
+          "src": "fifo_64.dataOut"
+        },
+        {
+          "dst": "fifo_65.dataIn",
+          "op_type": "assign",
+          "src": "f_54.dataOut.0"
+        },
+        {
+          "dst": "subf_32.operand1",
+          "op_type": "assign",
+          "src": "fifo_65.dataOut"
+        },
+        {
+          "dst": "fifo_66.dataIn",
+          "op_type": "assign",
+          "src": "b_41.dataOut.0"
+        },
+        {
+          "dst": "addf_44.operand0",
+          "op_type": "assign",
+          "src": "fifo_66.dataOut"
+        },
+        {
+          "dst": "fifo_67.dataIn",
+          "op_type": "assign",
+          "src": "b_42.dataOut.0"
+        },
+        {
+          "dst": "addf_44.operand1",
+          "op_type": "assign",
+          "src": "fifo_67.dataOut"
+        },
+        {
+          "dst": "fifo_68.dataIn",
+          "op_type": "assign",
+          "src": "f_57.dataOut.1"
+        },
+        {
+          "dst": "b_42.condition",
+          "op_type": "assign",
+          "src": "fifo_68.dataOut"
+        },
+        {
+          "dst": "fifo_69.dataIn",
+          "op_type": "assign",
+          "src": "addf_35.result"
+        },
+        {
+          "dst": "mulf_36.operand0",
+          "op_type": "assign",
+          "src": "fifo_69.dataOut"
+        },
+        {
+          "dst": "fifo_70.dataIn",
+          "op_type": "assign",
+          "src": "const_37.dataOut"
+        },
+        {
+          "dst": "mulf_36.operand1",
+          "op_type": "assign",
+          "src": "fifo_70.dataOut"
+        },
+        {
+          "dst": "fifo_71.dataIn",
+          "op_type": "assign",
+          "src": "mulf_33.result"
+        },
+        {
+          "dst": "addf_35.operand0",
+          "op_type": "assign",
+          "src": "fifo_71.dataOut"
+        },
+        {
+          "dst": "fifo_72.dataIn",
+          "op_type": "assign",
+          "src": "mulf_34.result"
+        },
+        {
+          "dst": "addf_35.operand1",
+          "op_type": "assign",
+          "src": "fifo_72.dataOut"
+        },
+        {
+          "dst": "fifo_73.dataIn",
+          "op_type": "assign",
+          "src": "f_55.dataOut.1"
+        },
+        {
+          "dst": "mulf_33.operand0",
+          "op_type": "assign",
+          "src": "fifo_73.dataOut"
+        },
+        {
+          "dst": "fifo_74.dataIn",
+          "op_type": "assign",
+          "src": "f_55.dataOut.0"
+        },
+        {
+          "dst": "mulf_33.operand1",
+          "op_type": "assign",
+          "src": "fifo_74.dataOut"
+        },
+        {
+          "dst": "fifo_75.dataIn",
+          "op_type": "assign",
+          "src": "f_56.dataOut.1"
+        },
+        {
+          "dst": "mulf_34.operand0",
+          "op_type": "assign",
+          "src": "fifo_75.dataOut"
+        },
+        {
+          "dst": "fifo_76.dataIn",
+          "op_type": "assign",
+          "src": "f_56.dataOut.0"
+        },
+        {
+          "dst": "mulf_34.operand1",
+          "op_type": "assign",
+          "src": "fifo_76.dataOut"
+        },
+        {
+          "dst": "fifo_77.dataIn",
+          "op_type": "assign",
+          "src": "addf_27.result"
+        },
+        {
+          "dst": "mulf_28.operand0",
+          "op_type": "assign",
+          "src": "fifo_77.dataOut"
+        },
+        {
+          "dst": "fifo_78.dataIn",
+          "op_type": "assign",
+          "src": "const_29.dataOut"
+        },
+        {
+          "dst": "mulf_28.operand1",
+          "op_type": "assign",
+          "src": "fifo_78.dataOut"
+        }
+      ],
+      "instances": [],
+      "name": "main",
+      "num_in": 1,
+      "ret_types": [],
+      "return_vals": [],
+      "sinks": [
+        "b_7.dataOut.1",
+        "b_15.dataOut.1",
+        "b_19.dataOut.1",
+        "b_23.dataOut.1",
+        "b_40.dataOut.0",
+        "b_40.dataOut.1",
+        "b_42.dataOut.1"
+      ],
+      "style": "handshake",
+      "types": [
+        "i1000",
+        "f64",
+        "i1000"
+      ],
+      "units": [
+        {
+          "name": "mem_0",
+          "op_type": "dyn_Mem:1,0#1024",
+          "types": [
+            "i32",
+            "f64"
+          ]
+        },
+        {
+          "name": "mem_1",
+          "op_type": "dyn_Mem:1,0#1024",
+          "types": [
+            "i32",
+            "f64"
+          ]
+        },
+        {
+          "name": "mem_2",
+          "op_type": "dyn_Mem:0,1#1024",
+          "types": [
+            "i32",
+            "f64"
+          ]
+        },
+        {
+          "name": "mem_3",
+          "op_type": "dyn_Mem:1,0#1024",
+          "types": [
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "cmpi_sle_4",
+          "op_type": "cmp_integer_sle",
+          "types": [
+            "i32",
+            "i32",
+            "bool"
+          ]
+        },
+        {
+          "name": "m_5",
+          "op_type": "control_merge",
+          "types": [
+            "i1000",
+            "i1000",
+            "i1000",
+            "bool"
+          ]
+        },
+        {
+          "name": "buf_6",
+          "op_type": "buffer",
+          "types": [
+            "i1000",
+            "i1000"
+          ]
+        },
+        {
+          "name": "b_7",
+          "op_type": "branch",
+          "types": [
+            "bool",
+            "i1000",
+            "i1000",
+            "i1000"
+          ]
+        },
+        {
+          "name": "m_8",
+          "op_type": "mux_dynamic",
+          "types": [
+            "f64",
+            "f64",
+            "f64",
+            "bool"
+          ]
+        },
+        {
+          "name": "buf_9",
+          "op_type": "buffer",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "b_10",
+          "op_type": "branch",
+          "types": [
+            "bool",
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "const_11",
+          "op_type": "constant",
+          "types": [
+            "i1000",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "const_12",
+          "op_type": "constant",
+          "types": [
+            "i1000",
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "m_13",
+          "op_type": "mux_dynamic",
+          "types": [
+            "i32",
+            "i32",
+            "i32",
+            "bool"
+          ]
+        },
+        {
+          "name": "buf_14",
+          "op_type": "buffer",
+          "types": [
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "b_15",
+          "op_type": "branch",
+          "types": [
+            "bool",
+            "i32",
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "const_16",
+          "op_type": "constant",
+          "types": [
+            "i1000",
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "m_17",
+          "op_type": "mux_dynamic",
+          "types": [
+            "i32",
+            "i32",
+            "i32",
+            "bool"
+          ]
+        },
+        {
+          "name": "buf_18",
+          "op_type": "buffer",
+          "types": [
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "b_19",
+          "op_type": "branch",
+          "types": [
+            "bool",
+            "i32",
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "const_20",
+          "op_type": "constant",
+          "types": [
+            "i1000",
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "m_21",
+          "op_type": "mux_dynamic",
+          "types": [
+            "i32",
+            "i32",
+            "i32",
+            "bool"
+          ]
+        },
+        {
+          "name": "buf_22",
+          "op_type": "buffer",
+          "types": [
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "b_23",
+          "op_type": "branch",
+          "types": [
+            "bool",
+            "i32",
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "addi_24",
+          "op_type": "add_integer",
+          "types": [
+            "i32",
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "load_25",
+          "op_type": "load#1024",
+          "types": [
+            "i32",
+            "f64",
+            "i32",
+            "f64",
+            "i1000"
+          ]
+        },
+        {
+          "name": "load_26",
+          "op_type": "load#1024",
+          "types": [
+            "i32",
+            "f64",
+            "i32",
+            "f64",
+            "i1000"
+          ]
+        },
+        {
+          "name": "addf_27",
+          "op_type": "add_float",
+          "types": [
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "mulf_28",
+          "op_type": "mul_float",
+          "types": [
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "const_29",
+          "op_type": "constant",
+          "types": [
+            "i1000",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "store_30",
+          "op_type": "store#1024",
+          "types": [
+            "i32",
+            "f64",
+            "i32",
+            "f64",
+            "i1000"
+          ]
+        },
+        {
+          "name": "subf_31",
+          "op_type": "sub_float",
+          "types": [
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "subf_32",
+          "op_type": "sub_float",
+          "types": [
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "mulf_33",
+          "op_type": "mul_float",
+          "types": [
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "mulf_34",
+          "op_type": "mul_float",
+          "types": [
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "addf_35",
+          "op_type": "add_float",
+          "types": [
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "mulf_36",
+          "op_type": "mul_float",
+          "types": [
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "const_37",
+          "op_type": "constant",
+          "types": [
+            "i1000",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "load_38",
+          "op_type": "load#1024",
+          "types": [
+            "i32",
+            "i32",
+            "i32",
+            "i32",
+            "i1000"
+          ]
+        },
+        {
+          "name": "trunci_39",
+          "op_type": "trunc_integer",
+          "types": [
+            "i32",
+            "bool"
+          ]
+        },
+        {
+          "name": "b_40",
+          "op_type": "branch",
+          "types": [
+            "bool",
+            "i1000",
+            "i1000",
+            "i1000"
+          ]
+        },
+        {
+          "name": "b_41",
+          "op_type": "branch",
+          "types": [
+            "bool",
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "b_42",
+          "op_type": "branch",
+          "types": [
+            "bool",
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "m_43",
+          "op_type": "mux_dynamic",
+          "types": [
+            "f64",
+            "f64",
+            "f64",
+            "bool"
+          ]
+        },
+        {
+          "name": "addf_44",
+          "op_type": "add_float",
+          "types": [
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "f_45",
+          "op_type": "fork:5",
+          "types": [
+            "bool",
+            "bool",
+            "bool",
+            "bool",
+            "bool",
+            "bool"
+          ]
+        },
+        {
+          "name": "f_46",
+          "op_type": "fork:4",
+          "types": [
+            "bool",
+            "bool",
+            "bool",
+            "bool",
+            "bool"
+          ]
+        },
+        {
+          "name": "f_47",
+          "op_type": "fork:8",
+          "types": [
+            "i1000",
+            "i1000",
+            "i1000",
+            "i1000",
+            "i1000",
+            "i1000",
+            "i1000",
+            "i1000",
+            "i1000"
+          ]
+        },
+        {
+          "name": "f_48",
+          "op_type": "fork:2",
+          "types": [
+            "i32",
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "f_49",
+          "op_type": "fork:2",
+          "types": [
+            "i32",
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "f_50",
+          "op_type": "fork:2",
+          "types": [
+            "i32",
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "f_51",
+          "op_type": "fork:5",
+          "types": [
+            "i32",
+            "i32",
+            "i32",
+            "i32",
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "f_52",
+          "op_type": "fork:2",
+          "types": [
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "f_53",
+          "op_type": "fork:2",
+          "types": [
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "f_54",
+          "op_type": "fork:3",
+          "types": [
+            "f64",
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "f_55",
+          "op_type": "fork:2",
+          "types": [
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "f_56",
+          "op_type": "fork:2",
+          "types": [
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "f_57",
+          "op_type": "fork:4",
+          "types": [
+            "bool",
+            "bool",
+            "bool",
+            "bool",
+            "bool"
+          ]
+        },
+        {
+          "name": "fifo_58",
+          "op_type": "fifo:13",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_59",
+          "op_type": "fifo:13",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_60",
+          "op_type": "fifo:22",
+          "types": [
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "fifo_61",
+          "op_type": "fifo:22",
+          "types": [
+            "i1000",
+            "i1000"
+          ]
+        },
+        {
+          "name": "fifo_62",
+          "op_type": "fifo:35",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_63",
+          "op_type": "fifo:13",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_64",
+          "op_type": "fifo:35",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_65",
+          "op_type": "fifo:13",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_66",
+          "op_type": "fifo:79",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_67",
+          "op_type": "fifo:13",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_68",
+          "op_type": "fifo:66",
+          "types": [
+            "bool",
+            "bool"
+          ]
+        },
+        {
+          "name": "fifo_69",
+          "op_type": "fifo:9",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_70",
+          "op_type": "fifo:66",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_71",
+          "op_type": "fifo:13",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_72",
+          "op_type": "fifo:13",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_73",
+          "op_type": "fifo:9",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_74",
+          "op_type": "fifo:9",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_75",
+          "op_type": "fifo:9",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_76",
+          "op_type": "fifo:9",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_77",
+          "op_type": "fifo:9",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "fifo_78",
+          "op_type": "fifo:22",
+          "types": [
+            "f64",
+            "f64"
+          ]
+        }
+      ]
+    }
+  ]
+}
