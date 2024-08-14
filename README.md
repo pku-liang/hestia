@@ -1,5 +1,11 @@
 # Hestia: An Efficient Cross-level Debugger for High-level Synthesis
 
+## Introduction
+
+High-level synthesis offers an opportunity to design hardware at the software level, which automatically transforms high-level specifications into RTL designs. However, HLS compilers are often considered complex black-box procedures, lacking transparency for designers and hindering the debugging process. Programmers often rely on simulating the HLS design to comprehend the behavior of the generated hardware. RTL simulation, the prevalent hardware debugging method, is time-consuming and inundates designers with excessive details when applied to HLS designs. Conversely, software-level simulation sacrifices hardware-specific details, resulting in inaccurate results. The debugging challenge primarily stems from the semantic gap between software descriptions and RTL implementations. 
+
+This project presents Hestia, an efficient cross-level debugger enabling debugging HLS designs at different abstraction levels. Hestia provides a multi-level interpreter, aiding in debugging various issues in the HLS procedure with less hardware details and lower time costs. With an equivalent mapping across different levels, Hestia facilitates bug identification and localization, providing breakpoints and stepping at multiple granularities. We demonstrate the effectiveness of Hestia from three aspects: simulation efficiency, debugging capability, and scalability.
+
 # Setup
 
 ## Install Rust
