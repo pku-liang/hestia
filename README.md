@@ -1,6 +1,8 @@
 # Hestia: An Efficient Cross-level Debugger for High-level Synthesis
 
 ## [Artifact](https://github.com/pku-liang/hestia-artifact)
+Examples about interactive debugging using Hestia are shown in the artifact repo above.
+
 
 ## Introduction
 
