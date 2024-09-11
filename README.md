@@ -3,6 +3,16 @@
 ## [Artifact](https://github.com/pku-liang/hestia-artifact)
 Examples about interactive debugging using Hestia are shown in the artifact repo above.
 
+## Citing Hestia
+```latex
+@inproceedings{Hestia,
+  author = {Ruifan, Xu and Jin, Luo and Yanwen, Zhang and Yibo, Lin and Runsheng, Wang and Ru, Huang and Yun, Liang},
+  title = {Hestia: An Efficient Cross-level Debugger for High-level Synthesis},
+  booktitle = {MICRO '24: 55th IEEE/ACM International Symposium on Microarchitecture},
+  publisher = {IEEE},
+  year = {2024},
+}
+```
 
 ## Introduction
 
