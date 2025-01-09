@@ -390,7 +390,7 @@ impl PipelineTimeGraph {
 
     fn step_one_stage(&mut self, index: usize, env: &mut Vec<Env>) -> STEP {
         let cur = self.stages[index];
-        println!("STEP {} {:?}", index, cur);
+        // println!("STEP {} {:?}", index, cur);
         if let Some((if_op, yield_op, _)) = &mut self.if_node[cur.0] {
             if !cur.3 {
                 let cond = env[index].get_value(&if_op.condition);
