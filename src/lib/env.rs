@@ -35,7 +35,7 @@ impl UnitEnv {
     pub fn new(unit: &Unit) -> Self {
         let latency = match &unit.op_type as &str {
             "register" => 1,
-            "mul_integer" => 3,
+            "mul_integer" => 2,
             "truncf" | "extf" | "sitofp" => 2,
             "div_integer" => 10,
             "sub_float" | "add_float" => match &unit.types[2] as &str {
