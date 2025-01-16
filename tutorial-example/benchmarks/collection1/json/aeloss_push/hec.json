@@ -1,0 +1,4916 @@
+{
+  "constants": [
+    {
+      "name": "op_2",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "new_constant_6",
+      "operands": "94.501156",
+      "type": "f64"
+    },
+    {
+      "name": "new_constant_5",
+      "operands": "0.097710",
+      "type": "f64"
+    },
+    {
+      "name": "new_constant_4",
+      "operands": "10.234400",
+      "type": "f64"
+    },
+    {
+      "name": "new_constant_3",
+      "operands": "1.000000",
+      "type": "f64"
+    },
+    {
+      "name": "new_constant_2",
+      "operands": "0.000000",
+      "type": "f64"
+    },
+    {
+      "name": "new_constant_1",
+      "operands": "94.500756",
+      "type": "f64"
+    },
+    {
+      "name": "new_constant_0",
+      "operands": "9.234000",
+      "type": "f64"
+    },
+    {
+      "name": "op_3",
+      "operands": "1024",
+      "type": "i32"
+    },
+    {
+      "name": "op_4",
+      "operands": "1023",
+      "type": "i32"
+    },
+    {
+      "name": "op_5",
+      "operands": "0",
+      "type": "i32"
+    },
+    {
+      "name": "op_6",
+      "operands": "0",
+      "type": "bool"
+    },
+    {
+      "name": "op_7",
+      "operands": "0",
+      "type": "i32"
+    },
+    {
+      "name": "op_8",
+      "operands": "0.000400",
+      "type": "f64"
+    },
+    {
+      "name": "op_9",
+      "operands": "2",
+      "type": "i32"
+    },
+    {
+      "name": "op_10",
+      "operands": "1.000000",
+      "type": "f64"
+    },
+    {
+      "name": "op_11",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_12",
+      "operands": "0.000000",
+      "type": "f64"
+    },
+    {
+      "name": "op_13",
+      "operands": "10.234000",
+      "type": "f64"
+    }
+  ],
+  "level": "hec",
+  "memory": [
+    {
+      "name": "mem_global_0",
+      "size": 1024,
+      "type": "f64"
+    },
+    {
+      "name": "mem_global_1",
+      "size": 1024,
+      "type": "i32"
+    }
+  ],
+  "modules": [
+    {
+      "args": [
+        "in0",
+        "in1",
+        "in2",
+        "in3",
+        "in4",
+        "go",
+        "out0",
+        "done"
+      ],
+      "ii": 15,
+      "inits": [
+        {
+          "dst": "r_0_1.reg",
+          "src": "in0"
+        },
+        {
+          "dst": "r_1_1.reg",
+          "src": "in1"
+        },
+        {
+          "dst": "r_2_1.reg",
+          "src": "in2"
+        },
+        {
+          "dst": "r_3_1.reg",
+          "src": "in3"
+        },
+        {
+          "dst": "r_4_1.reg",
+          "src": "in4"
+        },
+        {
+          "dst": "r_6_1.reg",
+          "src": "in4"
+        }
+      ],
+      "instances": [],
+      "name": "outline_0",
+      "num_in": 6,
+      "pipeline_style": "for",
+      "ret_types": [],
+      "return_vals": [],
+      "stages": [
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_1.reg",
+              "op_type": "assign",
+              "src": "i"
+            }
+          ],
+          "stage": "s0"
+        },
+        {
+          "ops": [
+            {
+              "dst": "mem_global_0.addr",
+              "op_type": "assign",
+              "src": "r_3_1.reg"
+            },
+            {
+              "op_type": "enable",
+              "port": "mem_global_0.r_en"
+            },
+            {
+              "dst": "mem_global_1.addr",
+              "op_type": "assign",
+              "src": "r_5_i_1.reg"
+            },
+            {
+              "op_type": "enable",
+              "port": "mem_global_1.r_en"
+            },
+            {
+              "dst": "r_5_i_2.reg",
+              "op_type": "assign",
+              "src": "r_5_i_1.reg"
+            },
+            {
+              "dst": "r_6_2.reg",
+              "op_type": "assign",
+              "src": "r_6_1.reg"
+            }
+          ],
+          "stage": "s1"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_8_3.reg",
+              "op_type": "assign",
+              "src": "mem_global_0.r_data"
+            },
+            {
+              "dst": "r_9_3.reg",
+              "op_type": "assign",
+              "src": "mem_global_1.r_data"
+            },
+            {
+              "dst": "mem_global_0.addr",
+              "op_type": "assign",
+              "src": "r_5_i_2.reg"
+            },
+            {
+              "op_type": "enable",
+              "port": "mem_global_0.r_en"
+            },
+            {
+              "name": "comb_0",
+              "op_type": "cmp_ne",
+              "operands": [
+                "r_3_1.reg",
+                "r_5_i_2.reg"
+              ],
+              "type": "bool"
+            },
+            {
+              "dst": "r_11_3.reg",
+              "op_type": "assign",
+              "src": "comb_0"
+            },
+            {
+              "name": "comb_1",
+              "op_type": "trunc",
+              "operands": [
+                "mem_global_1.r_data"
+              ],
+              "type": "bool"
+            },
+            {
+              "dst": "r_12_3.reg",
+              "op_type": "assign",
+              "src": "comb_1"
+            },
+            {
+              "name": "comb_2",
+              "op_type": "and",
+              "operands": [
+                "comb_1",
+                "comb_0"
+              ],
+              "type": "bool"
+            },
+            {
+              "dst": "r_13_3.reg",
+              "op_type": "assign",
+              "src": "comb_2"
+            },
+            {
+              "dst": "r_5_i_3.reg",
+              "op_type": "assign",
+              "src": "r_5_i_2.reg"
+            },
+            {
+              "dst": "r_6_3.reg",
+              "op_type": "assign",
+              "src": "r_6_2.reg"
+            }
+          ],
+          "stage": "s2"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_10_4.reg",
+              "op_type": "assign",
+              "src": "mem_global_0.r_data"
+            },
+            {
+              "dst": "subf_outline_0_0.operand0",
+              "op_type": "assign",
+              "src": "r_8_3.reg"
+            },
+            {
+              "dst": "subf_outline_0_0.operand1",
+              "op_type": "assign",
+              "src": "mem_global_0.r_data"
+            },
+            {
+              "dst": "r_5_i_4.reg",
+              "op_type": "assign",
+              "src": "r_5_i_3.reg"
+            },
+            {
+              "dst": "r_6_4.reg",
+              "op_type": "assign",
+              "src": "r_6_3.reg"
+            },
+            {
+              "dst": "r_8_4.reg",
+              "op_type": "assign",
+              "src": "r_8_3.reg"
+            },
+            {
+              "dst": "r_13_4.reg",
+              "op_type": "assign",
+              "src": "r_13_3.reg"
+            }
+          ],
+          "stage": "s3"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_5.reg",
+              "op_type": "assign",
+              "src": "r_5_i_4.reg"
+            },
+            {
+              "dst": "r_6_5.reg",
+              "op_type": "assign",
+              "src": "r_6_4.reg"
+            },
+            {
+              "dst": "r_13_5.reg",
+              "op_type": "assign",
+              "src": "r_13_4.reg"
+            }
+          ],
+          "stage": "s4"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_6.reg",
+              "op_type": "assign",
+              "src": "r_5_i_5.reg"
+            },
+            {
+              "dst": "r_6_6.reg",
+              "op_type": "assign",
+              "src": "r_6_5.reg"
+            },
+            {
+              "dst": "r_13_6.reg",
+              "op_type": "assign",
+              "src": "r_13_5.reg"
+            }
+          ],
+          "stage": "s5"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_7.reg",
+              "op_type": "assign",
+              "src": "r_5_i_6.reg"
+            },
+            {
+              "dst": "r_6_7.reg",
+              "op_type": "assign",
+              "src": "r_6_6.reg"
+            },
+            {
+              "dst": "r_13_7.reg",
+              "op_type": "assign",
+              "src": "r_13_6.reg"
+            }
+          ],
+          "stage": "s6"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_8.reg",
+              "op_type": "assign",
+              "src": "r_5_i_7.reg"
+            },
+            {
+              "dst": "r_6_8.reg",
+              "op_type": "assign",
+              "src": "r_6_7.reg"
+            },
+            {
+              "dst": "r_13_8.reg",
+              "op_type": "assign",
+              "src": "r_13_7.reg"
+            }
+          ],
+          "stage": "s7"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_9.reg",
+              "op_type": "assign",
+              "src": "r_5_i_8.reg"
+            },
+            {
+              "dst": "r_6_9.reg",
+              "op_type": "assign",
+              "src": "r_6_8.reg"
+            },
+            {
+              "dst": "r_13_9.reg",
+              "op_type": "assign",
+              "src": "r_13_8.reg"
+            }
+          ],
+          "stage": "s8"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_10.reg",
+              "op_type": "assign",
+              "src": "r_5_i_9.reg"
+            },
+            {
+              "dst": "r_6_10.reg",
+              "op_type": "assign",
+              "src": "r_6_9.reg"
+            },
+            {
+              "dst": "r_13_10.reg",
+              "op_type": "assign",
+              "src": "r_13_9.reg"
+            }
+          ],
+          "stage": "s9"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_11.reg",
+              "op_type": "assign",
+              "src": "r_5_i_10.reg"
+            },
+            {
+              "dst": "r_6_11.reg",
+              "op_type": "assign",
+              "src": "r_6_10.reg"
+            },
+            {
+              "dst": "r_13_11.reg",
+              "op_type": "assign",
+              "src": "r_13_10.reg"
+            }
+          ],
+          "stage": "s10"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_12.reg",
+              "op_type": "assign",
+              "src": "r_5_i_11.reg"
+            },
+            {
+              "dst": "r_6_12.reg",
+              "op_type": "assign",
+              "src": "r_6_11.reg"
+            },
+            {
+              "dst": "r_13_12.reg",
+              "op_type": "assign",
+              "src": "r_13_11.reg"
+            }
+          ],
+          "stage": "s11"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_13.reg",
+              "op_type": "assign",
+              "src": "r_5_i_12.reg"
+            },
+            {
+              "dst": "r_6_13.reg",
+              "op_type": "assign",
+              "src": "r_6_12.reg"
+            },
+            {
+              "dst": "r_13_13.reg",
+              "op_type": "assign",
+              "src": "r_13_12.reg"
+            }
+          ],
+          "stage": "s12"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_14.reg",
+              "op_type": "assign",
+              "src": "r_5_i_13.reg"
+            },
+            {
+              "dst": "r_6_14.reg",
+              "op_type": "assign",
+              "src": "r_6_13.reg"
+            },
+            {
+              "dst": "r_13_14.reg",
+              "op_type": "assign",
+              "src": "r_13_13.reg"
+            }
+          ],
+          "stage": "s13"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_15.reg",
+              "op_type": "assign",
+              "src": "r_5_i_14.reg"
+            },
+            {
+              "dst": "r_6_15.reg",
+              "op_type": "assign",
+              "src": "r_6_14.reg"
+            },
+            {
+              "dst": "r_13_15.reg",
+              "op_type": "assign",
+              "src": "r_13_14.reg"
+            }
+          ],
+          "stage": "s14"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_16.reg",
+              "op_type": "assign",
+              "src": "r_5_i_15.reg"
+            },
+            {
+              "dst": "r_6_16.reg",
+              "op_type": "assign",
+              "src": "r_6_15.reg"
+            },
+            {
+              "dst": "r_13_16.reg",
+              "op_type": "assign",
+              "src": "r_13_15.reg"
+            }
+          ],
+          "stage": "s15"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_14_17.reg",
+              "op_type": "assign",
+              "src": "subf_outline_0_0.result"
+            },
+            {
+              "dst": "cmpf_outline_0_0.operand0",
+              "op_type": "assign",
+              "src": "subf_outline_0_0.result"
+            },
+            {
+              "dst": "cmpf_outline_0_0.operand1",
+              "op_type": "assign",
+              "src": "new_constant_2"
+            },
+            {
+              "dst": "subf_outline_0_0.operand0",
+              "op_type": "assign",
+              "src": "op_10"
+            },
+            {
+              "dst": "subf_outline_0_0.operand1",
+              "op_type": "assign",
+              "src": "subf_outline_0_0.result"
+            },
+            {
+              "dst": "addf_outline_0_0.operand0",
+              "op_type": "assign",
+              "src": "op_10"
+            },
+            {
+              "dst": "addf_outline_0_0.operand1",
+              "op_type": "assign",
+              "src": "subf_outline_0_0.result"
+            },
+            {
+              "dst": "r_5_i_17.reg",
+              "op_type": "assign",
+              "src": "r_5_i_16.reg"
+            },
+            {
+              "dst": "r_6_17.reg",
+              "op_type": "assign",
+              "src": "r_6_16.reg"
+            },
+            {
+              "dst": "r_13_17.reg",
+              "op_type": "assign",
+              "src": "r_13_16.reg"
+            }
+          ],
+          "stage": "s16"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_18.reg",
+              "op_type": "assign",
+              "src": "r_5_i_17.reg"
+            },
+            {
+              "dst": "r_6_18.reg",
+              "op_type": "assign",
+              "src": "r_6_17.reg"
+            },
+            {
+              "dst": "r_13_18.reg",
+              "op_type": "assign",
+              "src": "r_13_17.reg"
+            }
+          ],
+          "stage": "s17"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_15_19.reg",
+              "op_type": "assign",
+              "src": "cmpf_outline_0_0.result"
+            },
+            {
+              "dst": "r_5_i_19.reg",
+              "op_type": "assign",
+              "src": "r_5_i_18.reg"
+            },
+            {
+              "dst": "r_6_19.reg",
+              "op_type": "assign",
+              "src": "r_6_18.reg"
+            },
+            {
+              "dst": "r_13_19.reg",
+              "op_type": "assign",
+              "src": "r_13_18.reg"
+            }
+          ],
+          "stage": "s18"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_20.reg",
+              "op_type": "assign",
+              "src": "r_5_i_19.reg"
+            },
+            {
+              "dst": "r_6_20.reg",
+              "op_type": "assign",
+              "src": "r_6_19.reg"
+            },
+            {
+              "dst": "r_13_20.reg",
+              "op_type": "assign",
+              "src": "r_13_19.reg"
+            },
+            {
+              "dst": "r_15_20.reg",
+              "op_type": "assign",
+              "src": "r_15_19.reg"
+            }
+          ],
+          "stage": "s19"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_21.reg",
+              "op_type": "assign",
+              "src": "r_5_i_20.reg"
+            },
+            {
+              "dst": "r_6_21.reg",
+              "op_type": "assign",
+              "src": "r_6_20.reg"
+            },
+            {
+              "dst": "r_13_21.reg",
+              "op_type": "assign",
+              "src": "r_13_20.reg"
+            },
+            {
+              "dst": "r_15_21.reg",
+              "op_type": "assign",
+              "src": "r_15_20.reg"
+            }
+          ],
+          "stage": "s20"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_22.reg",
+              "op_type": "assign",
+              "src": "r_5_i_21.reg"
+            },
+            {
+              "dst": "r_6_22.reg",
+              "op_type": "assign",
+              "src": "r_6_21.reg"
+            },
+            {
+              "dst": "r_13_22.reg",
+              "op_type": "assign",
+              "src": "r_13_21.reg"
+            },
+            {
+              "dst": "r_15_22.reg",
+              "op_type": "assign",
+              "src": "r_15_21.reg"
+            }
+          ],
+          "stage": "s21"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_23.reg",
+              "op_type": "assign",
+              "src": "r_5_i_22.reg"
+            },
+            {
+              "dst": "r_6_23.reg",
+              "op_type": "assign",
+              "src": "r_6_22.reg"
+            },
+            {
+              "dst": "r_13_23.reg",
+              "op_type": "assign",
+              "src": "r_13_22.reg"
+            },
+            {
+              "dst": "r_15_23.reg",
+              "op_type": "assign",
+              "src": "r_15_22.reg"
+            }
+          ],
+          "stage": "s22"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_24.reg",
+              "op_type": "assign",
+              "src": "r_5_i_23.reg"
+            },
+            {
+              "dst": "r_6_24.reg",
+              "op_type": "assign",
+              "src": "r_6_23.reg"
+            },
+            {
+              "dst": "r_13_24.reg",
+              "op_type": "assign",
+              "src": "r_13_23.reg"
+            },
+            {
+              "dst": "r_15_24.reg",
+              "op_type": "assign",
+              "src": "r_15_23.reg"
+            }
+          ],
+          "stage": "s23"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_25.reg",
+              "op_type": "assign",
+              "src": "r_5_i_24.reg"
+            },
+            {
+              "dst": "r_6_25.reg",
+              "op_type": "assign",
+              "src": "r_6_24.reg"
+            },
+            {
+              "dst": "r_13_25.reg",
+              "op_type": "assign",
+              "src": "r_13_24.reg"
+            },
+            {
+              "dst": "r_15_25.reg",
+              "op_type": "assign",
+              "src": "r_15_24.reg"
+            }
+          ],
+          "stage": "s24"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_26.reg",
+              "op_type": "assign",
+              "src": "r_5_i_25.reg"
+            },
+            {
+              "dst": "r_6_26.reg",
+              "op_type": "assign",
+              "src": "r_6_25.reg"
+            },
+            {
+              "dst": "r_13_26.reg",
+              "op_type": "assign",
+              "src": "r_13_25.reg"
+            },
+            {
+              "dst": "r_15_26.reg",
+              "op_type": "assign",
+              "src": "r_15_25.reg"
+            }
+          ],
+          "stage": "s25"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_27.reg",
+              "op_type": "assign",
+              "src": "r_5_i_26.reg"
+            },
+            {
+              "dst": "r_6_27.reg",
+              "op_type": "assign",
+              "src": "r_6_26.reg"
+            },
+            {
+              "dst": "r_13_27.reg",
+              "op_type": "assign",
+              "src": "r_13_26.reg"
+            },
+            {
+              "dst": "r_15_27.reg",
+              "op_type": "assign",
+              "src": "r_15_26.reg"
+            }
+          ],
+          "stage": "s26"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_28.reg",
+              "op_type": "assign",
+              "src": "r_5_i_27.reg"
+            },
+            {
+              "dst": "r_6_28.reg",
+              "op_type": "assign",
+              "src": "r_6_27.reg"
+            },
+            {
+              "dst": "r_13_28.reg",
+              "op_type": "assign",
+              "src": "r_13_27.reg"
+            },
+            {
+              "dst": "r_15_28.reg",
+              "op_type": "assign",
+              "src": "r_15_27.reg"
+            }
+          ],
+          "stage": "s27"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_29.reg",
+              "op_type": "assign",
+              "src": "r_5_i_28.reg"
+            },
+            {
+              "dst": "r_6_29.reg",
+              "op_type": "assign",
+              "src": "r_6_28.reg"
+            },
+            {
+              "dst": "r_13_29.reg",
+              "op_type": "assign",
+              "src": "r_13_28.reg"
+            },
+            {
+              "dst": "r_15_29.reg",
+              "op_type": "assign",
+              "src": "r_15_28.reg"
+            }
+          ],
+          "stage": "s28"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_16_30.reg",
+              "op_type": "assign",
+              "src": "subf_outline_0_0.result"
+            },
+            {
+              "dst": "r_17_30.reg",
+              "op_type": "assign",
+              "src": "addf_outline_0_0.result"
+            },
+            {
+              "name": "comb_3",
+              "op_type": "select",
+              "operands": [
+                "r_15_29.reg",
+                "subf_outline_0_0.result",
+                "addf_outline_0_0.result"
+              ],
+              "type": "f64"
+            },
+            {
+              "dst": "r_18_30.reg",
+              "op_type": "assign",
+              "src": "comb_3"
+            },
+            {
+              "dst": "r_5_i_30.reg",
+              "op_type": "assign",
+              "src": "r_5_i_29.reg"
+            },
+            {
+              "dst": "r_6_30.reg",
+              "op_type": "assign",
+              "src": "r_6_29.reg"
+            },
+            {
+              "dst": "r_13_30.reg",
+              "op_type": "assign",
+              "src": "r_13_29.reg"
+            },
+            {
+              "dst": "r_15_30.reg",
+              "op_type": "assign",
+              "src": "r_15_29.reg"
+            }
+          ],
+          "stage": "s29"
+        },
+        {
+          "ops": [
+            {
+              "dst": "cmpf_outline_0_0.operand0",
+              "op_type": "assign",
+              "src": "r_18_30.reg"
+            },
+            {
+              "dst": "cmpf_outline_0_0.operand1",
+              "op_type": "assign",
+              "src": "new_constant_2"
+            },
+            {
+              "dst": "r_5_i_31.reg",
+              "op_type": "assign",
+              "src": "r_5_i_30.reg"
+            },
+            {
+              "dst": "r_6_31.reg",
+              "op_type": "assign",
+              "src": "r_6_30.reg"
+            },
+            {
+              "dst": "r_13_31.reg",
+              "op_type": "assign",
+              "src": "r_13_30.reg"
+            },
+            {
+              "dst": "r_18_31.reg",
+              "op_type": "assign",
+              "src": "r_18_30.reg"
+            }
+          ],
+          "stage": "s30"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_32.reg",
+              "op_type": "assign",
+              "src": "r_5_i_31.reg"
+            },
+            {
+              "dst": "r_6_32.reg",
+              "op_type": "assign",
+              "src": "r_6_31.reg"
+            },
+            {
+              "dst": "r_13_32.reg",
+              "op_type": "assign",
+              "src": "r_13_31.reg"
+            },
+            {
+              "dst": "r_18_32.reg",
+              "op_type": "assign",
+              "src": "r_18_31.reg"
+            }
+          ],
+          "stage": "s31"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_19_33.reg",
+              "op_type": "assign",
+              "src": "cmpf_outline_0_0.result"
+            },
+            {
+              "name": "comb_4",
+              "op_type": "select",
+              "operands": [
+                "cmpf_outline_0_0.result",
+                "r_18_32.reg",
+                "new_constant_2"
+              ],
+              "type": "f64"
+            },
+            {
+              "dst": "r_20_33.reg",
+              "op_type": "assign",
+              "src": "comb_4"
+            },
+            {
+              "dst": "r_5_i_33.reg",
+              "op_type": "assign",
+              "src": "r_5_i_32.reg"
+            },
+            {
+              "dst": "r_6_33.reg",
+              "op_type": "assign",
+              "src": "r_6_32.reg"
+            },
+            {
+              "dst": "r_13_33.reg",
+              "op_type": "assign",
+              "src": "r_13_32.reg"
+            },
+            {
+              "dst": "r_18_33.reg",
+              "op_type": "assign",
+              "src": "r_18_32.reg"
+            }
+          ],
+          "stage": "s32"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_34.reg",
+              "op_type": "assign",
+              "src": "r_5_i_33.reg"
+            },
+            {
+              "dst": "r_6_34.reg",
+              "op_type": "assign",
+              "src": "r_6_33.reg"
+            },
+            {
+              "dst": "r_13_34.reg",
+              "op_type": "assign",
+              "src": "r_13_33.reg"
+            },
+            {
+              "dst": "r_20_34.reg",
+              "op_type": "assign",
+              "src": "r_20_33.reg"
+            }
+          ],
+          "stage": "s33"
+        },
+        {
+          "ops": [
+            {
+              "condition": "r_13_34.reg",
+              "dst": "subf_outline_0_0.operand0",
+              "op_type": "assign",
+              "src": "r_20_34.reg"
+            },
+            {
+              "condition": "r_13_34.reg",
+              "dst": "subf_outline_0_0.operand1",
+              "op_type": "assign",
+              "src": "new_constant_5"
+            },
+            {
+              "dst": "r_5_i_35.reg",
+              "op_type": "assign",
+              "src": "r_5_i_34.reg"
+            },
+            {
+              "dst": "r_6_35.reg",
+              "op_type": "assign",
+              "src": "r_6_34.reg"
+            },
+            {
+              "dst": "r_13_35.reg",
+              "op_type": "assign",
+              "src": "r_13_34.reg"
+            },
+            {
+              "dst": "r_20_35.reg",
+              "op_type": "assign",
+              "src": "r_20_34.reg"
+            }
+          ],
+          "stage": "s34"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_36.reg",
+              "op_type": "assign",
+              "src": "r_5_i_35.reg"
+            },
+            {
+              "dst": "r_6_36.reg",
+              "op_type": "assign",
+              "src": "r_6_35.reg"
+            },
+            {
+              "dst": "r_13_36.reg",
+              "op_type": "assign",
+              "src": "r_13_35.reg"
+            }
+          ],
+          "stage": "s35"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_37.reg",
+              "op_type": "assign",
+              "src": "r_5_i_36.reg"
+            },
+            {
+              "dst": "r_6_37.reg",
+              "op_type": "assign",
+              "src": "r_6_36.reg"
+            },
+            {
+              "dst": "r_13_37.reg",
+              "op_type": "assign",
+              "src": "r_13_36.reg"
+            }
+          ],
+          "stage": "s36"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_38.reg",
+              "op_type": "assign",
+              "src": "r_5_i_37.reg"
+            },
+            {
+              "dst": "r_6_38.reg",
+              "op_type": "assign",
+              "src": "r_6_37.reg"
+            },
+            {
+              "dst": "r_13_38.reg",
+              "op_type": "assign",
+              "src": "r_13_37.reg"
+            }
+          ],
+          "stage": "s37"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_39.reg",
+              "op_type": "assign",
+              "src": "r_5_i_38.reg"
+            },
+            {
+              "dst": "r_6_39.reg",
+              "op_type": "assign",
+              "src": "r_6_38.reg"
+            },
+            {
+              "dst": "r_13_39.reg",
+              "op_type": "assign",
+              "src": "r_13_38.reg"
+            }
+          ],
+          "stage": "s38"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_40.reg",
+              "op_type": "assign",
+              "src": "r_5_i_39.reg"
+            },
+            {
+              "dst": "r_6_40.reg",
+              "op_type": "assign",
+              "src": "r_6_39.reg"
+            },
+            {
+              "dst": "r_13_40.reg",
+              "op_type": "assign",
+              "src": "r_13_39.reg"
+            }
+          ],
+          "stage": "s39"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_41.reg",
+              "op_type": "assign",
+              "src": "r_5_i_40.reg"
+            },
+            {
+              "dst": "r_6_41.reg",
+              "op_type": "assign",
+              "src": "r_6_40.reg"
+            },
+            {
+              "dst": "r_13_41.reg",
+              "op_type": "assign",
+              "src": "r_13_40.reg"
+            }
+          ],
+          "stage": "s40"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_42.reg",
+              "op_type": "assign",
+              "src": "r_5_i_41.reg"
+            },
+            {
+              "dst": "r_6_42.reg",
+              "op_type": "assign",
+              "src": "r_6_41.reg"
+            },
+            {
+              "dst": "r_13_42.reg",
+              "op_type": "assign",
+              "src": "r_13_41.reg"
+            }
+          ],
+          "stage": "s41"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_43.reg",
+              "op_type": "assign",
+              "src": "r_5_i_42.reg"
+            },
+            {
+              "dst": "r_6_43.reg",
+              "op_type": "assign",
+              "src": "r_6_42.reg"
+            },
+            {
+              "dst": "r_13_43.reg",
+              "op_type": "assign",
+              "src": "r_13_42.reg"
+            }
+          ],
+          "stage": "s42"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_44.reg",
+              "op_type": "assign",
+              "src": "r_5_i_43.reg"
+            },
+            {
+              "dst": "r_6_44.reg",
+              "op_type": "assign",
+              "src": "r_6_43.reg"
+            },
+            {
+              "dst": "r_13_44.reg",
+              "op_type": "assign",
+              "src": "r_13_43.reg"
+            }
+          ],
+          "stage": "s43"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_45.reg",
+              "op_type": "assign",
+              "src": "r_5_i_44.reg"
+            },
+            {
+              "dst": "r_6_45.reg",
+              "op_type": "assign",
+              "src": "r_6_44.reg"
+            },
+            {
+              "dst": "r_13_45.reg",
+              "op_type": "assign",
+              "src": "r_13_44.reg"
+            }
+          ],
+          "stage": "s44"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_46.reg",
+              "op_type": "assign",
+              "src": "r_5_i_45.reg"
+            },
+            {
+              "dst": "r_6_46.reg",
+              "op_type": "assign",
+              "src": "r_6_45.reg"
+            },
+            {
+              "dst": "r_13_46.reg",
+              "op_type": "assign",
+              "src": "r_13_45.reg"
+            }
+          ],
+          "stage": "s45"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_47.reg",
+              "op_type": "assign",
+              "src": "r_5_i_46.reg"
+            },
+            {
+              "dst": "r_6_47.reg",
+              "op_type": "assign",
+              "src": "r_6_46.reg"
+            },
+            {
+              "dst": "r_13_47.reg",
+              "op_type": "assign",
+              "src": "r_13_46.reg"
+            }
+          ],
+          "stage": "s46"
+        },
+        {
+          "ops": [
+            {
+              "condition": "r_13_47.reg",
+              "dst": "r_22_48.reg",
+              "op_type": "assign",
+              "src": "subf_outline_0_0.result"
+            },
+            {
+              "condition": "r_13_47.reg",
+              "dst": "divf_outline_0_0.operand0",
+              "op_type": "assign",
+              "src": "subf_outline_0_0.result"
+            },
+            {
+              "condition": "r_13_47.reg",
+              "dst": "divf_outline_0_0.operand1",
+              "op_type": "assign",
+              "src": "new_constant_6"
+            },
+            {
+              "dst": "r_5_i_48.reg",
+              "op_type": "assign",
+              "src": "r_5_i_47.reg"
+            },
+            {
+              "dst": "r_6_48.reg",
+              "op_type": "assign",
+              "src": "r_6_47.reg"
+            },
+            {
+              "dst": "r_13_48.reg",
+              "op_type": "assign",
+              "src": "r_13_47.reg"
+            }
+          ],
+          "stage": "s47"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_49.reg",
+              "op_type": "assign",
+              "src": "r_5_i_48.reg"
+            },
+            {
+              "dst": "r_6_49.reg",
+              "op_type": "assign",
+              "src": "r_6_48.reg"
+            },
+            {
+              "dst": "r_13_49.reg",
+              "op_type": "assign",
+              "src": "r_13_48.reg"
+            }
+          ],
+          "stage": "s48"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_50.reg",
+              "op_type": "assign",
+              "src": "r_5_i_49.reg"
+            },
+            {
+              "dst": "r_6_50.reg",
+              "op_type": "assign",
+              "src": "r_6_49.reg"
+            },
+            {
+              "dst": "r_13_50.reg",
+              "op_type": "assign",
+              "src": "r_13_49.reg"
+            }
+          ],
+          "stage": "s49"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_51.reg",
+              "op_type": "assign",
+              "src": "r_5_i_50.reg"
+            },
+            {
+              "dst": "r_6_51.reg",
+              "op_type": "assign",
+              "src": "r_6_50.reg"
+            },
+            {
+              "dst": "r_13_51.reg",
+              "op_type": "assign",
+              "src": "r_13_50.reg"
+            }
+          ],
+          "stage": "s50"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_52.reg",
+              "op_type": "assign",
+              "src": "r_5_i_51.reg"
+            },
+            {
+              "dst": "r_6_52.reg",
+              "op_type": "assign",
+              "src": "r_6_51.reg"
+            },
+            {
+              "dst": "r_13_52.reg",
+              "op_type": "assign",
+              "src": "r_13_51.reg"
+            }
+          ],
+          "stage": "s51"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_53.reg",
+              "op_type": "assign",
+              "src": "r_5_i_52.reg"
+            },
+            {
+              "dst": "r_6_53.reg",
+              "op_type": "assign",
+              "src": "r_6_52.reg"
+            },
+            {
+              "dst": "r_13_53.reg",
+              "op_type": "assign",
+              "src": "r_13_52.reg"
+            }
+          ],
+          "stage": "s52"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_54.reg",
+              "op_type": "assign",
+              "src": "r_5_i_53.reg"
+            },
+            {
+              "dst": "r_6_54.reg",
+              "op_type": "assign",
+              "src": "r_6_53.reg"
+            },
+            {
+              "dst": "r_13_54.reg",
+              "op_type": "assign",
+              "src": "r_13_53.reg"
+            }
+          ],
+          "stage": "s53"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_55.reg",
+              "op_type": "assign",
+              "src": "r_5_i_54.reg"
+            },
+            {
+              "dst": "r_6_55.reg",
+              "op_type": "assign",
+              "src": "r_6_54.reg"
+            },
+            {
+              "dst": "r_13_55.reg",
+              "op_type": "assign",
+              "src": "r_13_54.reg"
+            }
+          ],
+          "stage": "s54"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_56.reg",
+              "op_type": "assign",
+              "src": "r_5_i_55.reg"
+            },
+            {
+              "dst": "r_6_56.reg",
+              "op_type": "assign",
+              "src": "r_6_55.reg"
+            },
+            {
+              "dst": "r_13_56.reg",
+              "op_type": "assign",
+              "src": "r_13_55.reg"
+            }
+          ],
+          "stage": "s55"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_57.reg",
+              "op_type": "assign",
+              "src": "r_5_i_56.reg"
+            },
+            {
+              "dst": "r_6_57.reg",
+              "op_type": "assign",
+              "src": "r_6_56.reg"
+            },
+            {
+              "dst": "r_13_57.reg",
+              "op_type": "assign",
+              "src": "r_13_56.reg"
+            }
+          ],
+          "stage": "s56"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_58.reg",
+              "op_type": "assign",
+              "src": "r_5_i_57.reg"
+            },
+            {
+              "dst": "r_6_58.reg",
+              "op_type": "assign",
+              "src": "r_6_57.reg"
+            },
+            {
+              "dst": "r_13_58.reg",
+              "op_type": "assign",
+              "src": "r_13_57.reg"
+            }
+          ],
+          "stage": "s57"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_59.reg",
+              "op_type": "assign",
+              "src": "r_5_i_58.reg"
+            },
+            {
+              "dst": "r_6_59.reg",
+              "op_type": "assign",
+              "src": "r_6_58.reg"
+            },
+            {
+              "dst": "r_13_59.reg",
+              "op_type": "assign",
+              "src": "r_13_58.reg"
+            }
+          ],
+          "stage": "s58"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_60.reg",
+              "op_type": "assign",
+              "src": "r_5_i_59.reg"
+            },
+            {
+              "dst": "r_6_60.reg",
+              "op_type": "assign",
+              "src": "r_6_59.reg"
+            },
+            {
+              "dst": "r_13_60.reg",
+              "op_type": "assign",
+              "src": "r_13_59.reg"
+            }
+          ],
+          "stage": "s59"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_61.reg",
+              "op_type": "assign",
+              "src": "r_5_i_60.reg"
+            },
+            {
+              "dst": "r_6_61.reg",
+              "op_type": "assign",
+              "src": "r_6_60.reg"
+            },
+            {
+              "dst": "r_13_61.reg",
+              "op_type": "assign",
+              "src": "r_13_60.reg"
+            }
+          ],
+          "stage": "s60"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_62.reg",
+              "op_type": "assign",
+              "src": "r_5_i_61.reg"
+            },
+            {
+              "dst": "r_6_62.reg",
+              "op_type": "assign",
+              "src": "r_6_61.reg"
+            },
+            {
+              "dst": "r_13_62.reg",
+              "op_type": "assign",
+              "src": "r_13_61.reg"
+            }
+          ],
+          "stage": "s61"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_63.reg",
+              "op_type": "assign",
+              "src": "r_5_i_62.reg"
+            },
+            {
+              "dst": "r_6_63.reg",
+              "op_type": "assign",
+              "src": "r_6_62.reg"
+            },
+            {
+              "dst": "r_13_63.reg",
+              "op_type": "assign",
+              "src": "r_13_62.reg"
+            }
+          ],
+          "stage": "s62"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_64.reg",
+              "op_type": "assign",
+              "src": "r_5_i_63.reg"
+            },
+            {
+              "dst": "r_6_64.reg",
+              "op_type": "assign",
+              "src": "r_6_63.reg"
+            },
+            {
+              "dst": "r_13_64.reg",
+              "op_type": "assign",
+              "src": "r_13_63.reg"
+            }
+          ],
+          "stage": "s63"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_65.reg",
+              "op_type": "assign",
+              "src": "r_5_i_64.reg"
+            },
+            {
+              "dst": "r_6_65.reg",
+              "op_type": "assign",
+              "src": "r_6_64.reg"
+            },
+            {
+              "dst": "r_13_65.reg",
+              "op_type": "assign",
+              "src": "r_13_64.reg"
+            }
+          ],
+          "stage": "s64"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_66.reg",
+              "op_type": "assign",
+              "src": "r_5_i_65.reg"
+            },
+            {
+              "dst": "r_6_66.reg",
+              "op_type": "assign",
+              "src": "r_6_65.reg"
+            },
+            {
+              "dst": "r_13_66.reg",
+              "op_type": "assign",
+              "src": "r_13_65.reg"
+            }
+          ],
+          "stage": "s65"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_67.reg",
+              "op_type": "assign",
+              "src": "r_5_i_66.reg"
+            },
+            {
+              "dst": "r_6_67.reg",
+              "op_type": "assign",
+              "src": "r_6_66.reg"
+            },
+            {
+              "dst": "r_13_67.reg",
+              "op_type": "assign",
+              "src": "r_13_66.reg"
+            }
+          ],
+          "stage": "s66"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_68.reg",
+              "op_type": "assign",
+              "src": "r_5_i_67.reg"
+            },
+            {
+              "dst": "r_6_68.reg",
+              "op_type": "assign",
+              "src": "r_6_67.reg"
+            },
+            {
+              "dst": "r_13_68.reg",
+              "op_type": "assign",
+              "src": "r_13_67.reg"
+            }
+          ],
+          "stage": "s67"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_69.reg",
+              "op_type": "assign",
+              "src": "r_5_i_68.reg"
+            },
+            {
+              "dst": "r_6_69.reg",
+              "op_type": "assign",
+              "src": "r_6_68.reg"
+            },
+            {
+              "dst": "r_13_69.reg",
+              "op_type": "assign",
+              "src": "r_13_68.reg"
+            }
+          ],
+          "stage": "s68"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_70.reg",
+              "op_type": "assign",
+              "src": "r_5_i_69.reg"
+            },
+            {
+              "dst": "r_6_70.reg",
+              "op_type": "assign",
+              "src": "r_6_69.reg"
+            },
+            {
+              "dst": "r_13_70.reg",
+              "op_type": "assign",
+              "src": "r_13_69.reg"
+            }
+          ],
+          "stage": "s69"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_71.reg",
+              "op_type": "assign",
+              "src": "r_5_i_70.reg"
+            },
+            {
+              "dst": "r_6_71.reg",
+              "op_type": "assign",
+              "src": "r_6_70.reg"
+            },
+            {
+              "dst": "r_13_71.reg",
+              "op_type": "assign",
+              "src": "r_13_70.reg"
+            }
+          ],
+          "stage": "s70"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_72.reg",
+              "op_type": "assign",
+              "src": "r_5_i_71.reg"
+            },
+            {
+              "dst": "r_6_72.reg",
+              "op_type": "assign",
+              "src": "r_6_71.reg"
+            },
+            {
+              "dst": "r_13_72.reg",
+              "op_type": "assign",
+              "src": "r_13_71.reg"
+            }
+          ],
+          "stage": "s71"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_73.reg",
+              "op_type": "assign",
+              "src": "r_5_i_72.reg"
+            },
+            {
+              "dst": "r_6_73.reg",
+              "op_type": "assign",
+              "src": "r_6_72.reg"
+            },
+            {
+              "dst": "r_13_73.reg",
+              "op_type": "assign",
+              "src": "r_13_72.reg"
+            }
+          ],
+          "stage": "s72"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_74.reg",
+              "op_type": "assign",
+              "src": "r_5_i_73.reg"
+            },
+            {
+              "dst": "r_6_74.reg",
+              "op_type": "assign",
+              "src": "r_6_73.reg"
+            },
+            {
+              "dst": "r_13_74.reg",
+              "op_type": "assign",
+              "src": "r_13_73.reg"
+            }
+          ],
+          "stage": "s73"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_75.reg",
+              "op_type": "assign",
+              "src": "r_5_i_74.reg"
+            },
+            {
+              "dst": "r_6_75.reg",
+              "op_type": "assign",
+              "src": "r_6_74.reg"
+            },
+            {
+              "dst": "r_13_75.reg",
+              "op_type": "assign",
+              "src": "r_13_74.reg"
+            }
+          ],
+          "stage": "s74"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_76.reg",
+              "op_type": "assign",
+              "src": "r_5_i_75.reg"
+            },
+            {
+              "dst": "r_6_76.reg",
+              "op_type": "assign",
+              "src": "r_6_75.reg"
+            },
+            {
+              "dst": "r_13_76.reg",
+              "op_type": "assign",
+              "src": "r_13_75.reg"
+            }
+          ],
+          "stage": "s75"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_77.reg",
+              "op_type": "assign",
+              "src": "r_5_i_76.reg"
+            },
+            {
+              "dst": "r_6_77.reg",
+              "op_type": "assign",
+              "src": "r_6_76.reg"
+            },
+            {
+              "dst": "r_13_77.reg",
+              "op_type": "assign",
+              "src": "r_13_76.reg"
+            }
+          ],
+          "stage": "s76"
+        },
+        {
+          "ops": [
+            {
+              "condition": "r_13_77.reg",
+              "dst": "r_23_78.reg",
+              "op_type": "assign",
+              "src": "divf_outline_0_0.result"
+            },
+            {
+              "condition": "r_13_77.reg",
+              "dst": "addf_outline_0_0.operand0",
+              "op_type": "assign",
+              "src": "r_6_77.reg"
+            },
+            {
+              "condition": "r_13_77.reg",
+              "dst": "addf_outline_0_0.operand1",
+              "op_type": "assign",
+              "src": "divf_outline_0_0.result"
+            },
+            {
+              "dst": "r_5_i_78.reg",
+              "op_type": "assign",
+              "src": "r_5_i_77.reg"
+            },
+            {
+              "dst": "r_6_78.reg",
+              "op_type": "assign",
+              "src": "r_6_77.reg"
+            },
+            {
+              "dst": "r_13_78.reg",
+              "op_type": "assign",
+              "src": "r_13_77.reg"
+            }
+          ],
+          "stage": "s77"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_79.reg",
+              "op_type": "assign",
+              "src": "r_5_i_78.reg"
+            },
+            {
+              "dst": "r_6_79.reg",
+              "op_type": "assign",
+              "src": "r_6_78.reg"
+            },
+            {
+              "dst": "r_13_79.reg",
+              "op_type": "assign",
+              "src": "r_13_78.reg"
+            }
+          ],
+          "stage": "s78"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_80.reg",
+              "op_type": "assign",
+              "src": "r_5_i_79.reg"
+            },
+            {
+              "dst": "r_6_80.reg",
+              "op_type": "assign",
+              "src": "r_6_79.reg"
+            },
+            {
+              "dst": "r_13_80.reg",
+              "op_type": "assign",
+              "src": "r_13_79.reg"
+            }
+          ],
+          "stage": "s79"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_81.reg",
+              "op_type": "assign",
+              "src": "r_5_i_80.reg"
+            },
+            {
+              "dst": "r_6_81.reg",
+              "op_type": "assign",
+              "src": "r_6_80.reg"
+            },
+            {
+              "dst": "r_13_81.reg",
+              "op_type": "assign",
+              "src": "r_13_80.reg"
+            }
+          ],
+          "stage": "s80"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_82.reg",
+              "op_type": "assign",
+              "src": "r_5_i_81.reg"
+            },
+            {
+              "dst": "r_6_82.reg",
+              "op_type": "assign",
+              "src": "r_6_81.reg"
+            },
+            {
+              "dst": "r_13_82.reg",
+              "op_type": "assign",
+              "src": "r_13_81.reg"
+            }
+          ],
+          "stage": "s81"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_83.reg",
+              "op_type": "assign",
+              "src": "r_5_i_82.reg"
+            },
+            {
+              "dst": "r_6_83.reg",
+              "op_type": "assign",
+              "src": "r_6_82.reg"
+            },
+            {
+              "dst": "r_13_83.reg",
+              "op_type": "assign",
+              "src": "r_13_82.reg"
+            }
+          ],
+          "stage": "s82"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_84.reg",
+              "op_type": "assign",
+              "src": "r_5_i_83.reg"
+            },
+            {
+              "dst": "r_6_84.reg",
+              "op_type": "assign",
+              "src": "r_6_83.reg"
+            },
+            {
+              "dst": "r_13_84.reg",
+              "op_type": "assign",
+              "src": "r_13_83.reg"
+            }
+          ],
+          "stage": "s83"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_85.reg",
+              "op_type": "assign",
+              "src": "r_5_i_84.reg"
+            },
+            {
+              "dst": "r_6_85.reg",
+              "op_type": "assign",
+              "src": "r_6_84.reg"
+            },
+            {
+              "dst": "r_13_85.reg",
+              "op_type": "assign",
+              "src": "r_13_84.reg"
+            }
+          ],
+          "stage": "s84"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_86.reg",
+              "op_type": "assign",
+              "src": "r_5_i_85.reg"
+            },
+            {
+              "dst": "r_6_86.reg",
+              "op_type": "assign",
+              "src": "r_6_85.reg"
+            },
+            {
+              "dst": "r_13_86.reg",
+              "op_type": "assign",
+              "src": "r_13_85.reg"
+            }
+          ],
+          "stage": "s85"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_87.reg",
+              "op_type": "assign",
+              "src": "r_5_i_86.reg"
+            },
+            {
+              "dst": "r_6_87.reg",
+              "op_type": "assign",
+              "src": "r_6_86.reg"
+            },
+            {
+              "dst": "r_13_87.reg",
+              "op_type": "assign",
+              "src": "r_13_86.reg"
+            }
+          ],
+          "stage": "s86"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_88.reg",
+              "op_type": "assign",
+              "src": "r_5_i_87.reg"
+            },
+            {
+              "dst": "r_6_88.reg",
+              "op_type": "assign",
+              "src": "r_6_87.reg"
+            },
+            {
+              "dst": "r_13_88.reg",
+              "op_type": "assign",
+              "src": "r_13_87.reg"
+            }
+          ],
+          "stage": "s87"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_89.reg",
+              "op_type": "assign",
+              "src": "r_5_i_88.reg"
+            },
+            {
+              "dst": "r_6_89.reg",
+              "op_type": "assign",
+              "src": "r_6_88.reg"
+            },
+            {
+              "dst": "r_13_89.reg",
+              "op_type": "assign",
+              "src": "r_13_88.reg"
+            }
+          ],
+          "stage": "s88"
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_5_i_90.reg",
+              "op_type": "assign",
+              "src": "r_5_i_89.reg"
+            },
+            {
+              "dst": "r_6_90.reg",
+              "op_type": "assign",
+              "src": "r_6_89.reg"
+            },
+            {
+              "dst": "r_13_90.reg",
+              "op_type": "assign",
+              "src": "r_13_89.reg"
+            }
+          ],
+          "stage": "s89"
+        },
+        {
+          "ops": [
+            {
+              "condition": "r_13_90.reg",
+              "dst": "r_24_91.reg",
+              "op_type": "assign",
+              "src": "addf_outline_0_0.result"
+            },
+            {
+              "condition": "r_13_90.reg",
+              "dst": "r_21_91.reg",
+              "op_type": "assign",
+              "src": "addf_outline_0_0.result"
+            },
+            {
+              "name": "comb_5",
+              "op_type": "not",
+              "operands": [
+                "r_13_90.reg"
+              ],
+              "type": "bool"
+            },
+            {
+              "condition": "comb_5",
+              "dst": "r_21_91.reg",
+              "op_type": "assign",
+              "src": "r_6_90.reg"
+            },
+            {
+              "dst": "r_5_i_91.reg",
+              "op_type": "assign",
+              "src": "r_5_i_90.reg"
+            },
+            {
+              "dst": "r_6_91.reg",
+              "op_type": "assign",
+              "src": "r_6_90.reg"
+            },
+            {
+              "dst": "r_13_91.reg",
+              "op_type": "assign",
+              "src": "r_13_90.reg"
+            }
+          ],
+          "stage": "s90"
+        },
+        {
+          "ops": [
+            {
+              "dst_port": "out0",
+              "dst_reg": "r_6_77.reg",
+              "op_type": "deliver",
+              "src": "r_21_91.reg"
+            }
+          ],
+          "stage": "s91"
+        }
+      ],
+      "style": "pipeline",
+      "types": [
+        "i32",
+        "i32",
+        "i32",
+        "i32",
+        "f64",
+        "bool",
+        "f64",
+        "bool"
+      ],
+      "units": [
+        {
+          "name": "r_0_1",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_1_1",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_2_1",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_3_1",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_4_1",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_5_i_1",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_2",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_3",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_4",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_5",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_6",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_7",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_8",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_9",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_10",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_11",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_12",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_13",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_14",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_15",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_16",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_17",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_18",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_19",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_20",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_21",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_22",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_23",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_24",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_25",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_26",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_27",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_28",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_29",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_30",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_31",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_32",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_33",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_34",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_35",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_36",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_37",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_38",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_39",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_40",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_41",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_42",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_43",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_44",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_45",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_46",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_47",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_48",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_49",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_50",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_51",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_52",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_53",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_54",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_55",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_56",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_57",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_58",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_59",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_60",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_61",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_62",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_63",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_64",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_65",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_66",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_67",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_68",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_69",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_70",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_71",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_72",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_73",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_74",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_75",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_76",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_77",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_78",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_79",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_80",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_81",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_82",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_83",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_84",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_85",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_86",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_87",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_88",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_89",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_90",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_5_i_91",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_6_1",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_2",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_3",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_4",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_5",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_6",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_7",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_8",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_9",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_10",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_11",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_12",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_13",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_14",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_15",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_16",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_17",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_18",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_19",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_20",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_21",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_22",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_23",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_24",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_25",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_26",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_27",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_28",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_29",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_30",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_31",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_32",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_33",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_34",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_35",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_36",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_37",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_38",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_39",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_40",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_41",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_42",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_43",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_44",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_45",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_46",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_47",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_48",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_49",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_50",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_51",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_52",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_53",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_54",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_55",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_56",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_57",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_58",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_59",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_60",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_61",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_62",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_63",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_64",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_65",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_66",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_67",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_68",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_69",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_70",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_71",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_72",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_73",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_74",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_75",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_76",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_77",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_78",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_79",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_80",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_81",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_82",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_83",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_84",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_85",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_86",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_87",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_88",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_89",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_90",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_6_91",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_8_3",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_8_4",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_9_3",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_10_4",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_11_3",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_12_3",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_3",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_4",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_5",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_6",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_7",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_8",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_9",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_10",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_11",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_12",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_13",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_14",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_15",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_16",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_17",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_18",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_19",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_20",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_21",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_22",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_23",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_24",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_25",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_26",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_27",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_28",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_29",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_30",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_31",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_32",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_33",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_34",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_35",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_36",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_37",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_38",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_39",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_40",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_41",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_42",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_43",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_44",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_45",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_46",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_47",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_48",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_49",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_50",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_51",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_52",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_53",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_54",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_55",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_56",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_57",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_58",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_59",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_60",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_61",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_62",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_63",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_64",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_65",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_66",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_67",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_68",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_69",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_70",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_71",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_72",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_73",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_74",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_75",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_76",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_77",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_78",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_79",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_80",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_81",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_82",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_83",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_84",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_85",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_86",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_87",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_88",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_89",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_90",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_13_91",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_14_17",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_15_19",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_15_20",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_15_21",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_15_22",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_15_23",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_15_24",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_15_25",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_15_26",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_15_27",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_15_28",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_15_29",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_15_30",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_16_30",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_17_30",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_18_30",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_18_31",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_18_32",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_18_33",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_19_33",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_20_33",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_20_34",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_20_35",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_21_91",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_22_48",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_23_78",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_24_91",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "subf_outline_0_0",
+          "op_type": "sub_float",
+          "types": [
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "cmpf_outline_0_0",
+          "op_type": "cmp_float_ugt",
+          "types": [
+            "f64",
+            "f64",
+            "bool"
+          ]
+        },
+        {
+          "name": "addf_outline_0_0",
+          "op_type": "add_float",
+          "types": [
+            "f64",
+            "f64",
+            "f64"
+          ]
+        },
+        {
+          "name": "divf_outline_0_0",
+          "op_type": "div_float",
+          "types": [
+            "f64",
+            "f64",
+            "f64"
+          ]
+        }
+      ],
+      "wires": {
+        "name": "i"
+      }
+    },
+    {
+      "args": [
+        "go",
+        "out0",
+        "done"
+      ],
+      "init_state": "s0",
+      "instances": [
+        {
+          "instance_name": "outline_0_0",
+          "module_name": "outline_0",
+          "names": []
+        }
+      ],
+      "name": "main",
+      "num_in": 1,
+      "ret_types": [],
+      "return_vals": [],
+      "states": [
+        {
+          "ops": [],
+          "state": "s0",
+          "transition": {
+            "default": "s1",
+            "jump": []
+          }
+        },
+        {
+          "ops": [
+            {
+              "name": "comb_6",
+              "op_type": "cmp_sle",
+              "operands": [
+                "op_5",
+                "op_4"
+              ],
+              "type": "bool"
+            },
+            {
+              "dst": "r_main_0.reg",
+              "op_type": "assign",
+              "src": "comb_6"
+            },
+            {
+              "name": "comb_7",
+              "op_type": "not",
+              "operands": [
+                "comb_6"
+              ],
+              "type": "bool"
+            },
+            {
+              "dst": "r_main_2.reg",
+              "op_type": "assign",
+              "src": "op_5"
+            },
+            {
+              "dst": "r_main_4.reg",
+              "op_type": "assign",
+              "src": "op_12"
+            },
+            {
+              "condition": "comb_7",
+              "dst": "r_main_5.reg",
+              "op_type": "assign",
+              "src": "op_12"
+            }
+          ],
+          "state": "s1",
+          "transition": {
+            "default": "s2",
+            "jump": [
+              {
+                "cond": "comb_7",
+                "dest": "s8"
+              }
+            ]
+          }
+        },
+        {
+          "ops": [
+            {
+              "name": "comb_8",
+              "op_type": "not",
+              "operands": [
+                "r_main_0.reg"
+              ],
+              "type": "bool"
+            },
+            {
+              "condition": "comb_8",
+              "dst": "r_main_5.reg",
+              "op_type": "assign",
+              "src": "r_main_4.reg"
+            }
+          ],
+          "state": "s1_entry",
+          "transition": {
+            "default": "s2",
+            "jump": [
+              {
+                "cond": "comb_8",
+                "dest": "s8"
+              }
+            ]
+          }
+        },
+        {
+          "ops": [
+            {
+              "dst": "mem_global_1.addr",
+              "op_type": "assign",
+              "src": "r_main_2.reg"
+            },
+            {
+              "op_type": "enable",
+              "port": "mem_global_1.r_en"
+            }
+          ],
+          "state": "s2",
+          "transition": {
+            "default": "s3",
+            "jump": []
+          }
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_main_3.reg",
+              "op_type": "assign",
+              "src": "mem_global_1.r_data"
+            },
+            {
+              "name": "comb_9",
+              "op_type": "trunc",
+              "operands": [
+                "mem_global_1.r_data"
+              ],
+              "type": "bool"
+            },
+            {
+              "dst": "r_main_1.reg",
+              "op_type": "assign",
+              "src": "comb_9"
+            }
+          ],
+          "state": "s3",
+          "transition": {
+            "default": "s4",
+            "jump": []
+          }
+        },
+        {
+          "ops": [
+            {
+              "name": "comb_10",
+              "op_type": "not",
+              "operands": [
+                "r_main_1.reg"
+              ],
+              "type": "bool"
+            },
+            {
+              "condition": "comb_10",
+              "dst": "r_main_6.reg",
+              "op_type": "assign",
+              "src": "r_main_4.reg"
+            }
+          ],
+          "state": "s4",
+          "transition": {
+            "jump": [
+              {
+                "cond": "r_main_1.reg",
+                "dest": "s5"
+              },
+              {
+                "cond": "comb_10",
+                "dest": "s7"
+              }
+            ]
+          }
+        },
+        {
+          "ops": [
+            {
+              "dst": "outline_0_0.in0",
+              "op_type": "assign",
+              "src": "op_5"
+            },
+            {
+              "dst": "outline_0_0.in1",
+              "op_type": "assign",
+              "src": "op_4"
+            },
+            {
+              "dst": "outline_0_0.in2",
+              "op_type": "assign",
+              "src": "op_2"
+            },
+            {
+              "dst": "outline_0_0.in3",
+              "op_type": "assign",
+              "src": "r_main_2.reg"
+            },
+            {
+              "dst": "outline_0_0.in4",
+              "op_type": "assign",
+              "src": "r_main_4.reg"
+            },
+            {
+              "instance": "outline_0_0",
+              "op_type": "go"
+            },
+            {
+              "condition": "outline_0_0.done",
+              "dst": "r_main_7.reg",
+              "op_type": "assign",
+              "src": "outline_0_0.out0"
+            }
+          ],
+          "state": "s5",
+          "transition": {
+            "default": "s5_wait",
+            "jump": [
+              {
+                "cond": "outline_0_0.done",
+                "dest": "s6"
+              }
+            ]
+          }
+        },
+        {
+          "ops": [
+            {
+              "condition": "outline_0_0.done",
+              "dst": "r_main_7.reg",
+              "op_type": "assign",
+              "src": "outline_0_0.out0"
+            }
+          ],
+          "state": "s5_wait",
+          "transition": {
+            "jump": [
+              {
+                "cond": "outline_0_0.done",
+                "dest": "s6"
+              }
+            ]
+          }
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_main_6.reg",
+              "op_type": "assign",
+              "src": "r_main_7.reg"
+            }
+          ],
+          "state": "s6",
+          "transition": {
+            "default": "s7",
+            "jump": []
+          }
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_main_4.reg",
+              "op_type": "assign",
+              "src": "r_main_6.reg"
+            },
+            {
+              "name": "comb_11",
+              "op_type": "add",
+              "operands": [
+                "r_main_2.reg",
+                "op_2"
+              ],
+              "type": "i32"
+            },
+            {
+              "dst": "r_main_2.reg",
+              "op_type": "assign",
+              "src": "comb_11"
+            },
+            {
+              "name": "comb_12",
+              "op_type": "cmp_sle",
+              "operands": [
+                "comb_11",
+                "op_4"
+              ],
+              "type": "bool"
+            },
+            {
+              "dst": "r_main_0.reg",
+              "op_type": "assign",
+              "src": "comb_12"
+            }
+          ],
+          "state": "s7",
+          "transition": {
+            "default": "s1_entry",
+            "jump": []
+          }
+        },
+        {
+          "ops": [],
+          "state": "s8",
+          "transition": {
+            "done": [
+              "r_main_5.reg"
+            ]
+          }
+        }
+      ],
+      "style": "STG",
+      "types": [
+        "bool",
+        "f64",
+        "bool"
+      ],
+      "units": [
+        {
+          "name": "r_main_0",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_main_2",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_main_4",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_main_5",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_main_3",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_main_1",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_main_6",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        },
+        {
+          "name": "r_main_7",
+          "op_type": "register",
+          "types": [
+            "f64"
+          ]
+        }
+      ]
+    }
+  ]
+}

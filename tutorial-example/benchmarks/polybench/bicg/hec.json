@@ -1,0 +1,683 @@
+{
+  "constants": [
+    {
+      "name": "const_15",
+      "operands": "1",
+      "type": "bool"
+    },
+    {
+      "name": "op_21",
+      "operands": "8",
+      "type": "i32"
+    },
+    {
+      "name": "new_constant_2",
+      "operands": "255",
+      "type": "i32"
+    },
+    {
+      "name": "op_8",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_5",
+      "operands": "0",
+      "type": "i32"
+    }
+  ],
+  "level": "hec",
+  "memory": [
+    {
+      "name": "mem_global_0",
+      "size": 65536,
+      "type": "i32"
+    },
+    {
+      "name": "mem_global_1",
+      "size": 256,
+      "type": "i32"
+    },
+    {
+      "name": "mem_global_2",
+      "size": 256,
+      "type": "i32"
+    },
+    {
+      "name": "mem_global_3",
+      "size": 256,
+      "type": "i32"
+    },
+    {
+      "name": "mem_global_4",
+      "size": 256,
+      "type": "i32"
+    }
+  ],
+  "modules": [
+    {
+      "args": [
+        "go",
+        "done"
+      ],
+      "init_state": "s0",
+      "instances": [],
+      "name": "main",
+      "num_in": 1,
+      "ret_types": [],
+      "return_vals": [],
+      "states": [
+        {
+          "ops": [
+            {
+              "dst": "r_main_0.reg",
+              "op_type": "assign",
+              "src": "const_15"
+            },
+            {
+              "dst": "r_main_2.reg",
+              "op_type": "assign",
+              "src": "op_5"
+            }
+          ],
+          "state": "s0",
+          "transition": {
+            "default": "s1",
+            "jump": []
+          }
+        },
+        {
+          "ops": [
+            {
+              "name": "comb_0",
+              "op_type": "not",
+              "operands": [
+                "r_main_0.reg"
+              ],
+              "type": "bool"
+            }
+          ],
+          "state": "s0_entry",
+          "transition": {
+            "default": "s1",
+            "jump": [
+              {
+                "cond": "comb_0",
+                "dest": "s3"
+              }
+            ]
+          }
+        },
+        {
+          "ops": [
+            {
+              "dst": "mem_global_1.addr",
+              "op_type": "assign",
+              "src": "r_main_2.reg"
+            },
+            {
+              "dst": "mem_global_1.w_data",
+              "op_type": "assign",
+              "src": "op_5"
+            },
+            {
+              "op_type": "enable",
+              "port": "mem_global_1.w_en"
+            }
+          ],
+          "state": "s1",
+          "transition": {
+            "default": "s2",
+            "jump": []
+          }
+        },
+        {
+          "ops": [
+            {
+              "name": "comb_1",
+              "op_type": "add",
+              "operands": [
+                "r_main_2.reg",
+                "op_8"
+              ],
+              "type": "i32"
+            },
+            {
+              "dst": "r_main_2.reg",
+              "op_type": "assign",
+              "src": "comb_1"
+            },
+            {
+              "name": "comb_2",
+              "op_type": "cmp_sle",
+              "operands": [
+                "comb_1",
+                "new_constant_2"
+              ],
+              "type": "bool"
+            },
+            {
+              "dst": "r_main_0.reg",
+              "op_type": "assign",
+              "src": "comb_2"
+            }
+          ],
+          "state": "s2",
+          "transition": {
+            "default": "s0_entry",
+            "jump": []
+          }
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_main_0.reg",
+              "op_type": "assign",
+              "src": "const_15"
+            },
+            {
+              "dst": "r_main_2.reg",
+              "op_type": "assign",
+              "src": "op_5"
+            }
+          ],
+          "state": "s3",
+          "transition": {
+            "default": "s5",
+            "jump": []
+          }
+        },
+        {
+          "ops": [
+            {
+              "name": "comb_3",
+              "op_type": "not",
+              "operands": [
+                "r_main_0.reg"
+              ],
+              "type": "bool"
+            }
+          ],
+          "state": "s4_entry",
+          "transition": {
+            "default": "s5",
+            "jump": [
+              {
+                "cond": "comb_3",
+                "dest": "s15"
+              }
+            ]
+          }
+        },
+        {
+          "ops": [
+            {
+              "dst": "mem_global_2.addr",
+              "op_type": "assign",
+              "src": "r_main_2.reg"
+            },
+            {
+              "dst": "mem_global_2.w_data",
+              "op_type": "assign",
+              "src": "op_5"
+            },
+            {
+              "op_type": "enable",
+              "port": "mem_global_2.w_en"
+            },
+            {
+              "dst": "r_main_1.reg",
+              "op_type": "assign",
+              "src": "const_15"
+            },
+            {
+              "dst": "r_main_3.reg",
+              "op_type": "assign",
+              "src": "op_5"
+            }
+          ],
+          "state": "s5",
+          "transition": {
+            "default": "s7",
+            "jump": []
+          }
+        },
+        {
+          "ops": [
+            {
+              "name": "comb_4",
+              "op_type": "not",
+              "operands": [
+                "r_main_1.reg"
+              ],
+              "type": "bool"
+            }
+          ],
+          "state": "s6_entry",
+          "transition": {
+            "default": "s7",
+            "jump": [
+              {
+                "cond": "comb_4",
+                "dest": "s13"
+              }
+            ]
+          }
+        },
+        {
+          "ops": [
+            {
+              "dst": "mem_global_1.addr",
+              "op_type": "assign",
+              "src": "r_main_3.reg"
+            },
+            {
+              "op_type": "enable",
+              "port": "mem_global_1.r_en"
+            },
+            {
+              "dst": "mem_global_4.addr",
+              "op_type": "assign",
+              "src": "r_main_2.reg"
+            },
+            {
+              "op_type": "enable",
+              "port": "mem_global_4.r_en"
+            },
+            {
+              "name": "comb_5",
+              "op_type": "shift_left",
+              "operands": [
+                "r_main_2.reg",
+                "op_21"
+              ],
+              "type": "i32"
+            },
+            {
+              "name": "comb_6",
+              "op_type": "add",
+              "operands": [
+                "r_main_3.reg",
+                "comb_5"
+              ],
+              "type": "i32"
+            },
+            {
+              "dst": "r_main_7.reg",
+              "op_type": "assign",
+              "src": "comb_6"
+            },
+            {
+              "dst": "mem_global_2.addr",
+              "op_type": "assign",
+              "src": "r_main_2.reg"
+            },
+            {
+              "op_type": "enable",
+              "port": "mem_global_2.r_en"
+            },
+            {
+              "name": "comb_7",
+              "op_type": "shift_left",
+              "operands": [
+                "r_main_2.reg",
+                "op_21"
+              ],
+              "type": "i32"
+            },
+            {
+              "name": "comb_8",
+              "op_type": "add",
+              "operands": [
+                "r_main_3.reg",
+                "comb_7"
+              ],
+              "type": "i32"
+            },
+            {
+              "dst": "mem_global_0.addr",
+              "op_type": "assign",
+              "src": "comb_8"
+            },
+            {
+              "op_type": "enable",
+              "port": "mem_global_0.r_en"
+            },
+            {
+              "dst": "mem_global_3.addr",
+              "op_type": "assign",
+              "src": "r_main_3.reg"
+            },
+            {
+              "op_type": "enable",
+              "port": "mem_global_3.r_en"
+            }
+          ],
+          "state": "s7",
+          "transition": {
+            "default": "s8",
+            "jump": []
+          }
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_main_4.reg",
+              "op_type": "assign",
+              "src": "mem_global_1.r_data"
+            },
+            {
+              "dst": "r_main_5.reg",
+              "op_type": "assign",
+              "src": "mem_global_4.r_data"
+            },
+            {
+              "dst": "r_main_8.reg",
+              "op_type": "assign",
+              "src": "mem_global_2.r_data"
+            },
+            {
+              "dst": "mem_global_0.addr",
+              "op_type": "assign",
+              "src": "r_main_7.reg"
+            },
+            {
+              "op_type": "enable",
+              "port": "mem_global_0.r_en"
+            },
+            {
+              "dst": "muli_main_0.operand0",
+              "op_type": "assign",
+              "src": "mem_global_0.r_data"
+            },
+            {
+              "dst": "muli_main_0.operand1",
+              "op_type": "assign",
+              "src": "mem_global_3.r_data"
+            }
+          ],
+          "state": "s8",
+          "transition": {
+            "default": "s9",
+            "jump": []
+          }
+        },
+        {
+          "ops": [
+            {
+              "dst": "muli_main_0.operand0",
+              "op_type": "assign",
+              "src": "r_main_5.reg"
+            },
+            {
+              "dst": "muli_main_0.operand1",
+              "op_type": "assign",
+              "src": "mem_global_0.r_data"
+            }
+          ],
+          "state": "s9",
+          "transition": {
+            "default": "s9_0",
+            "jump": []
+          }
+        },
+        {
+          "ops": [],
+          "state": "s9_0",
+          "transition": {
+            "default": "s10",
+            "jump": []
+          }
+        },
+        {
+          "ops": [
+            {
+              "name": "comb_9",
+              "op_type": "add",
+              "operands": [
+                "r_main_8.reg",
+                "muli_main_0.result"
+              ],
+              "type": "i32"
+            },
+            {
+              "dst": "r_main_5.reg",
+              "op_type": "assign",
+              "src": "comb_9"
+            },
+            {
+              "dst": "mem_global_2.addr",
+              "op_type": "assign",
+              "src": "r_main_2.reg"
+            },
+            {
+              "dst": "mem_global_2.w_data",
+              "op_type": "assign",
+              "src": "comb_9"
+            },
+            {
+              "op_type": "enable",
+              "port": "mem_global_2.w_en"
+            }
+          ],
+          "state": "s10",
+          "transition": {
+            "default": "s11",
+            "jump": []
+          }
+        },
+        {
+          "ops": [
+            {
+              "dst": "r_main_7.reg",
+              "op_type": "assign",
+              "src": "muli_main_0.result"
+            },
+            {
+              "name": "comb_10",
+              "op_type": "add",
+              "operands": [
+                "r_main_4.reg",
+                "muli_main_0.result"
+              ],
+              "type": "i32"
+            },
+            {
+              "dst": "r_main_5.reg",
+              "op_type": "assign",
+              "src": "comb_10"
+            },
+            {
+              "dst": "mem_global_1.addr",
+              "op_type": "assign",
+              "src": "r_main_3.reg"
+            },
+            {
+              "dst": "mem_global_1.w_data",
+              "op_type": "assign",
+              "src": "comb_10"
+            },
+            {
+              "op_type": "enable",
+              "port": "mem_global_1.w_en"
+            }
+          ],
+          "state": "s11",
+          "transition": {
+            "default": "s12",
+            "jump": []
+          }
+        },
+        {
+          "ops": [
+            {
+              "name": "comb_11",
+              "op_type": "add",
+              "operands": [
+                "r_main_3.reg",
+                "op_8"
+              ],
+              "type": "i32"
+            },
+            {
+              "dst": "r_main_3.reg",
+              "op_type": "assign",
+              "src": "comb_11"
+            },
+            {
+              "name": "comb_12",
+              "op_type": "cmp_sle",
+              "operands": [
+                "comb_11",
+                "new_constant_2"
+              ],
+              "type": "bool"
+            },
+            {
+              "dst": "r_main_1.reg",
+              "op_type": "assign",
+              "src": "comb_12"
+            }
+          ],
+          "state": "s12",
+          "transition": {
+            "default": "s6_entry",
+            "jump": []
+          }
+        },
+        {
+          "ops": [],
+          "state": "s13",
+          "transition": {
+            "default": "s14",
+            "jump": []
+          }
+        },
+        {
+          "ops": [
+            {
+              "name": "comb_13",
+              "op_type": "add",
+              "operands": [
+                "r_main_2.reg",
+                "op_8"
+              ],
+              "type": "i32"
+            },
+            {
+              "dst": "r_main_2.reg",
+              "op_type": "assign",
+              "src": "comb_13"
+            },
+            {
+              "name": "comb_14",
+              "op_type": "cmp_sle",
+              "operands": [
+                "comb_13",
+                "new_constant_2"
+              ],
+              "type": "bool"
+            },
+            {
+              "dst": "r_main_0.reg",
+              "op_type": "assign",
+              "src": "comb_14"
+            }
+          ],
+          "state": "s14",
+          "transition": {
+            "default": "s4_entry",
+            "jump": []
+          }
+        },
+        {
+          "ops": [],
+          "state": "s15",
+          "transition": {
+            "default": "s16",
+            "jump": []
+          }
+        },
+        {
+          "ops": [],
+          "state": "s16",
+          "transition": {
+            "done": []
+          }
+        }
+      ],
+      "style": "STG",
+      "types": [
+        "bool",
+        "bool"
+      ],
+      "units": [
+        {
+          "name": "muli_main_0",
+          "op_type": "mul_integer",
+          "types": [
+            "i32",
+            "i32",
+            "i32"
+          ]
+        },
+        {
+          "name": "r_main_0",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_main_2",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_main_1",
+          "op_type": "register",
+          "types": [
+            "bool"
+          ]
+        },
+        {
+          "name": "r_main_3",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_main_4",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_main_5",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_main_7",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        },
+        {
+          "name": "r_main_8",
+          "op_type": "register",
+          "types": [
+            "i32"
+          ]
+        }
+      ]
+    }
+  ]
+}

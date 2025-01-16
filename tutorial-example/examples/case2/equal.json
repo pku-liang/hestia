@@ -1,0 +1,42 @@
+[
+  {
+    "end": "s5",
+    "end_node": 5,
+    "op": "op_16",
+    "primitive": "muli_main_0",
+    "start": "s4",
+    "start_node": 4
+  },
+  {
+    "end": "s14",
+    "end_node": 14,
+    "op": "op_44",
+    "primitive": "muli_main_0",
+    "start": "s12",
+    "start_node": 12
+  },
+  {
+    "end": "s15",
+    "end_node": 15,
+    "op": "op_34",
+    "primitive": "muli_main_0",
+    "start": "s13",
+    "start_node": 13
+  },
+  {
+    "end": "s16",
+    "end_node": 16,
+    "op": "op_49",
+    "primitive": "muli_main_0",
+    "start": "s14",
+    "start_node": 14
+  },
+  {
+    "end": "s17",
+    "end_node": 17,
+    "op": "op_39",
+    "primitive": "muli_main_0",
+    "start": "s15",
+    "start_node": 15
+  }
+]

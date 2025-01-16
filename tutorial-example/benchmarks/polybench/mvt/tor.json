@@ -1,0 +1,467 @@
+{
+  "constants": [
+    {
+      "name": "op_31",
+      "operands": "8",
+      "type": "i32"
+    },
+    {
+      "name": "new_constant_0",
+      "operands": "255",
+      "type": "i32"
+    },
+    {
+      "name": "op_29",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_28",
+      "operands": "256",
+      "type": "i32"
+    },
+    {
+      "name": "op_27",
+      "operands": "0",
+      "type": "i32"
+    },
+    {
+      "name": "new_constant_1",
+      "operands": "255",
+      "type": "i32"
+    },
+    {
+      "name": "op_26",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_25",
+      "operands": "256",
+      "type": "i32"
+    },
+    {
+      "name": "op_24",
+      "operands": "0",
+      "type": "i32"
+    },
+    {
+      "name": "op_12",
+      "operands": "8",
+      "type": "i32"
+    },
+    {
+      "name": "new_constant_2",
+      "operands": "255",
+      "type": "i32"
+    },
+    {
+      "name": "op_10",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_9",
+      "operands": "256",
+      "type": "i32"
+    },
+    {
+      "name": "op_8",
+      "operands": "0",
+      "type": "i32"
+    },
+    {
+      "name": "new_constant_3",
+      "operands": "255",
+      "type": "i32"
+    },
+    {
+      "name": "op_7",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_6",
+      "operands": "256",
+      "type": "i32"
+    },
+    {
+      "name": "op_5",
+      "operands": "0",
+      "type": "i32"
+    }
+  ],
+  "level": "tor",
+  "memory": [
+    {
+      "name": "op_0",
+      "size": 256,
+      "type": "i32"
+    },
+    {
+      "name": "op_1",
+      "size": 256,
+      "type": "i32"
+    },
+    {
+      "name": "op_2",
+      "size": 256,
+      "type": "i32"
+    },
+    {
+      "name": "op_3",
+      "size": 256,
+      "type": "i32"
+    },
+    {
+      "name": "op_4",
+      "size": 65536,
+      "type": "i32"
+    }
+  ],
+  "modules": [
+    {
+      "args": [],
+      "body": [
+        {
+          "body": [
+            {
+              "body": [
+                {
+                  "end": 3,
+                  "index": "op_23_b",
+                  "memory": "op_0",
+                  "name": "op_11",
+                  "op_type": "load",
+                  "start": 2
+                },
+                {
+                  "end": 3,
+                  "name": "op_13",
+                  "op_type": "shift_left",
+                  "operands": [
+                    "op_23_b",
+                    "op_12"
+                  ],
+                  "start": 2,
+                  "type": "i32"
+                },
+                {
+                  "end": 3,
+                  "name": "op_14",
+                  "op_type": "add",
+                  "operands": [
+                    "op_21_b",
+                    "op_13"
+                  ],
+                  "start": 2,
+                  "type": "i32"
+                },
+                {
+                  "end": 3,
+                  "index": "op_14",
+                  "memory": "op_4",
+                  "name": "op_15",
+                  "op_type": "load",
+                  "start": 2
+                },
+                {
+                  "end": 3,
+                  "index": "op_21_b",
+                  "memory": "op_2",
+                  "name": "op_16",
+                  "op_type": "load",
+                  "start": 2
+                },
+                {
+                  "end": 4,
+                  "name": "op_17",
+                  "op_type": "mul",
+                  "operands": [
+                    "op_15",
+                    "op_16"
+                  ],
+                  "start": 3,
+                  "type": "i32"
+                },
+                {
+                  "end": 5,
+                  "name": "op_18",
+                  "op_type": "add",
+                  "operands": [
+                    "op_11",
+                    "op_17"
+                  ],
+                  "start": 4,
+                  "type": "i32"
+                },
+                {
+                  "end": 5,
+                  "index": "op_23_b",
+                  "memory": "op_0",
+                  "op_type": "store",
+                  "start": 4,
+                  "value": "op_18"
+                },
+                {
+                  "jump": 1,
+                  "op_type": "yield",
+                  "operands": [],
+                  "time": 5
+                }
+              ],
+              "end": 5,
+              "iter_args": [],
+              "iter_inits": [],
+              "iter_name": "op_21_b",
+              "lb": "op_8",
+              "names": [],
+              "op_type": "for",
+              "start": 1,
+              "step": "op_10",
+              "ub": "new_constant_2"
+            },
+            {
+              "jump": 0,
+              "op_type": "yield",
+              "operands": [],
+              "time": 7
+            }
+          ],
+          "end": 7,
+          "iter_args": [],
+          "iter_inits": [],
+          "iter_name": "op_23_b",
+          "lb": "op_5",
+          "names": [],
+          "op_type": "for",
+          "start": 0,
+          "step": "op_7",
+          "ub": "new_constant_3"
+        },
+        {
+          "body": [
+            {
+              "body": [
+                {
+                  "end": 12,
+                  "index": "op_42_b",
+                  "memory": "op_1",
+                  "name": "op_30",
+                  "op_type": "load",
+                  "start": 11
+                },
+                {
+                  "end": 12,
+                  "name": "op_32",
+                  "op_type": "shift_left",
+                  "operands": [
+                    "op_40_b",
+                    "op_31"
+                  ],
+                  "start": 11,
+                  "type": "i32"
+                },
+                {
+                  "end": 12,
+                  "name": "op_33",
+                  "op_type": "add",
+                  "operands": [
+                    "op_42_b",
+                    "op_32"
+                  ],
+                  "start": 11,
+                  "type": "i32"
+                },
+                {
+                  "end": 12,
+                  "index": "op_33",
+                  "memory": "op_4",
+                  "name": "op_34",
+                  "op_type": "load",
+                  "start": 11
+                },
+                {
+                  "end": 12,
+                  "index": "op_40_b",
+                  "memory": "op_3",
+                  "name": "op_35",
+                  "op_type": "load",
+                  "start": 11
+                },
+                {
+                  "end": 13,
+                  "name": "op_36",
+                  "op_type": "mul",
+                  "operands": [
+                    "op_34",
+                    "op_35"
+                  ],
+                  "start": 12,
+                  "type": "i32"
+                },
+                {
+                  "end": 14,
+                  "name": "op_37",
+                  "op_type": "add",
+                  "operands": [
+                    "op_30",
+                    "op_36"
+                  ],
+                  "start": 13,
+                  "type": "i32"
+                },
+                {
+                  "end": 14,
+                  "index": "op_42_b",
+                  "memory": "op_1",
+                  "op_type": "store",
+                  "start": 13,
+                  "value": "op_37"
+                },
+                {
+                  "jump": 10,
+                  "op_type": "yield",
+                  "operands": [],
+                  "time": 14
+                }
+              ],
+              "end": 14,
+              "iter_args": [],
+              "iter_inits": [],
+              "iter_name": "op_40_b",
+              "lb": "op_27",
+              "names": [],
+              "op_type": "for",
+              "start": 10,
+              "step": "op_29",
+              "ub": "new_constant_0"
+            },
+            {
+              "jump": 9,
+              "op_type": "yield",
+              "operands": [],
+              "time": 16
+            }
+          ],
+          "end": 16,
+          "iter_args": [],
+          "iter_inits": [],
+          "iter_name": "op_42_b",
+          "lb": "op_24",
+          "names": [],
+          "op_type": "for",
+          "start": 9,
+          "step": "op_26",
+          "ub": "new_constant_1"
+        },
+        {
+          "op_type": "return",
+          "operands": [],
+          "time": 18
+        }
+      ],
+      "graph": {
+        "edge": [
+          {
+            "from": 0,
+            "to": 1,
+            "type": "static"
+          },
+          {
+            "from": 1,
+            "to": 2,
+            "type": "static"
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "type": "static:1"
+          },
+          {
+            "from": 3,
+            "to": 4,
+            "type": "static:3"
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "type": "static:1"
+          },
+          {
+            "from": 1,
+            "to": 6,
+            "type": "static-for"
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "type": "static"
+          },
+          {
+            "from": 0,
+            "to": 8,
+            "type": "static-for"
+          },
+          {
+            "from": 8,
+            "to": 9,
+            "type": "static"
+          },
+          {
+            "from": 9,
+            "to": 10,
+            "type": "static"
+          },
+          {
+            "from": 10,
+            "to": 11,
+            "type": "static"
+          },
+          {
+            "from": 11,
+            "to": 12,
+            "type": "static:1"
+          },
+          {
+            "from": 12,
+            "to": 13,
+            "type": "static:3"
+          },
+          {
+            "from": 13,
+            "to": 14,
+            "type": "static:1"
+          },
+          {
+            "from": 10,
+            "to": 15,
+            "type": "static-for"
+          },
+          {
+            "from": 15,
+            "to": 16,
+            "type": "static"
+          },
+          {
+            "from": 9,
+            "to": 17,
+            "type": "static-for"
+          },
+          {
+            "from": 17,
+            "to": 18,
+            "type": "static"
+          }
+        ],
+        "end": 18,
+        "start": 0
+      },
+      "name": "main",
+      "ret_types": [],
+      "return_vals": [],
+      "strategy": "static",
+      "types": []
+    }
+  ]
+}

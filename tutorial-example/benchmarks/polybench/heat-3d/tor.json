@@ -1,0 +1,2055 @@
+{
+  "constants": [
+    {
+      "name": "op_191",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_188",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_180",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_177",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_175",
+      "operands": "-1",
+      "type": "i32"
+    },
+    {
+      "name": "op_170",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_167",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_165",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_158",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_155",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_153",
+      "operands": "-1",
+      "type": "i32"
+    },
+    {
+      "name": "op_148",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_145",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_143",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_137",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_134",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_132",
+      "operands": "-1",
+      "type": "i32"
+    },
+    {
+      "name": "op_129",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_125",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_122",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_118",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_115",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_113",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "new_constant_0",
+      "operands": "8",
+      "type": "i32"
+    },
+    {
+      "name": "op_112",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_111",
+      "operands": "9",
+      "type": "i32"
+    },
+    {
+      "name": "op_110",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "new_constant_1",
+      "operands": "8",
+      "type": "i32"
+    },
+    {
+      "name": "op_109",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_108",
+      "operands": "9",
+      "type": "i32"
+    },
+    {
+      "name": "op_107",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "new_constant_2",
+      "operands": "8",
+      "type": "i32"
+    },
+    {
+      "name": "op_106",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_105",
+      "operands": "9",
+      "type": "i32"
+    },
+    {
+      "name": "op_104",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_94",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_91",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_83",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_80",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_78",
+      "operands": "-1",
+      "type": "i32"
+    },
+    {
+      "name": "op_73",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_70",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_68",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_61",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_58",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_56",
+      "operands": "-1",
+      "type": "i32"
+    },
+    {
+      "name": "op_51",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_48",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_46",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_40",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_37",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_35",
+      "operands": "-1",
+      "type": "i32"
+    },
+    {
+      "name": "op_32",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_28",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_25",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_21",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_18",
+      "operands": "10",
+      "type": "i32"
+    },
+    {
+      "name": "op_16",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "new_constant_3",
+      "operands": "8",
+      "type": "i32"
+    },
+    {
+      "name": "op_15",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_14",
+      "operands": "9",
+      "type": "i32"
+    },
+    {
+      "name": "op_13",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "new_constant_4",
+      "operands": "8",
+      "type": "i32"
+    },
+    {
+      "name": "op_12",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_11",
+      "operands": "9",
+      "type": "i32"
+    },
+    {
+      "name": "op_10",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "new_constant_5",
+      "operands": "8",
+      "type": "i32"
+    },
+    {
+      "name": "op_9",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_8",
+      "operands": "9",
+      "type": "i32"
+    },
+    {
+      "name": "op_7",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "new_constant_6",
+      "operands": "20",
+      "type": "i32"
+    },
+    {
+      "name": "op_6",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_5",
+      "operands": "21",
+      "type": "i32"
+    },
+    {
+      "name": "op_4",
+      "operands": "1",
+      "type": "i32"
+    },
+    {
+      "name": "op_3",
+      "operands": "12",
+      "type": "i32"
+    },
+    {
+      "name": "op_2",
+      "operands": "2",
+      "type": "i32"
+    }
+  ],
+  "level": "tor",
+  "memory": [
+    {
+      "name": "op_0",
+      "size": 1000,
+      "type": "i32"
+    },
+    {
+      "name": "op_1",
+      "size": 1000,
+      "type": "i32"
+    }
+  ],
+  "modules": [
+    {
+      "args": [],
+      "body": [
+        {
+          "body": [
+            {
+              "body": [
+                {
+                  "body": [
+                    {
+                      "body": [
+                        {
+                          "end": 5,
+                          "name": "op_17",
+                          "op_type": "add",
+                          "operands": [
+                            "op_103_b",
+                            "op_16"
+                          ],
+                          "start": 4,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 6,
+                          "name": "op_19",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_17",
+                            "op_18"
+                          ],
+                          "start": 4,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 7,
+                          "name": "op_20",
+                          "op_type": "add",
+                          "operands": [
+                            "op_101_b",
+                            "op_19"
+                          ],
+                          "start": 6,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 8,
+                          "name": "op_22",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_20",
+                            "op_21"
+                          ],
+                          "start": 6,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 9,
+                          "name": "op_23",
+                          "op_type": "add",
+                          "operands": [
+                            "op_99_b",
+                            "op_22"
+                          ],
+                          "start": 8,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 15,
+                          "index": "op_23",
+                          "memory": "op_0",
+                          "name": "op_24",
+                          "op_type": "load",
+                          "start": 14
+                        },
+                        {
+                          "end": 6,
+                          "name": "op_26",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_103_b",
+                            "op_25"
+                          ],
+                          "start": 4,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 7,
+                          "name": "op_27",
+                          "op_type": "add",
+                          "operands": [
+                            "op_101_b",
+                            "op_26"
+                          ],
+                          "start": 6,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 8,
+                          "name": "op_29",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_27",
+                            "op_28"
+                          ],
+                          "start": 6,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 9,
+                          "name": "op_30",
+                          "op_type": "add",
+                          "operands": [
+                            "op_99_b",
+                            "op_29"
+                          ],
+                          "start": 8,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 11,
+                          "index": "op_30",
+                          "memory": "op_0",
+                          "name": "op_31",
+                          "op_type": "load",
+                          "start": 10
+                        },
+                        {
+                          "end": 12,
+                          "name": "op_33",
+                          "op_type": "shift_left",
+                          "operands": [
+                            "op_31",
+                            "op_32"
+                          ],
+                          "start": 11,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 16,
+                          "name": "op_34",
+                          "op_type": "sub",
+                          "operands": [
+                            "op_24",
+                            "op_33"
+                          ],
+                          "start": 15,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 5,
+                          "name": "op_36",
+                          "op_type": "add",
+                          "operands": [
+                            "op_103_b",
+                            "op_35"
+                          ],
+                          "start": 4,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 6,
+                          "name": "op_38",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_36",
+                            "op_37"
+                          ],
+                          "start": 4,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 7,
+                          "name": "op_39",
+                          "op_type": "add",
+                          "operands": [
+                            "op_101_b",
+                            "op_38"
+                          ],
+                          "start": 6,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 8,
+                          "name": "op_41",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_39",
+                            "op_40"
+                          ],
+                          "start": 6,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 9,
+                          "name": "op_42",
+                          "op_type": "add",
+                          "operands": [
+                            "op_99_b",
+                            "op_41"
+                          ],
+                          "start": 8,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 14,
+                          "index": "op_42",
+                          "memory": "op_0",
+                          "name": "op_43",
+                          "op_type": "load",
+                          "start": 13
+                        },
+                        {
+                          "end": 16,
+                          "name": "op_44",
+                          "op_type": "add",
+                          "operands": [
+                            "op_34",
+                            "op_43"
+                          ],
+                          "start": 15,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 17,
+                          "name": "op_45",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_44",
+                            "op_3"
+                          ],
+                          "start": 15,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 5,
+                          "name": "op_47",
+                          "op_type": "add",
+                          "operands": [
+                            "op_101_b",
+                            "op_46"
+                          ],
+                          "start": 4,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 6,
+                          "name": "op_49",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_103_b",
+                            "op_48"
+                          ],
+                          "start": 4,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 7,
+                          "name": "op_50",
+                          "op_type": "add",
+                          "operands": [
+                            "op_47",
+                            "op_49"
+                          ],
+                          "start": 6,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 8,
+                          "name": "op_52",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_50",
+                            "op_51"
+                          ],
+                          "start": 6,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 9,
+                          "name": "op_53",
+                          "op_type": "add",
+                          "operands": [
+                            "op_99_b",
+                            "op_52"
+                          ],
+                          "start": 8,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 13,
+                          "index": "op_53",
+                          "memory": "op_0",
+                          "name": "op_54",
+                          "op_type": "load",
+                          "start": 12
+                        },
+                        {
+                          "end": 14,
+                          "name": "op_55",
+                          "op_type": "sub",
+                          "operands": [
+                            "op_54",
+                            "op_33"
+                          ],
+                          "start": 13,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 5,
+                          "name": "op_57",
+                          "op_type": "add",
+                          "operands": [
+                            "op_101_b",
+                            "op_56"
+                          ],
+                          "start": 4,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 6,
+                          "name": "op_59",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_103_b",
+                            "op_58"
+                          ],
+                          "start": 4,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 7,
+                          "name": "op_60",
+                          "op_type": "add",
+                          "operands": [
+                            "op_57",
+                            "op_59"
+                          ],
+                          "start": 6,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 8,
+                          "name": "op_62",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_60",
+                            "op_61"
+                          ],
+                          "start": 6,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 9,
+                          "name": "op_63",
+                          "op_type": "add",
+                          "operands": [
+                            "op_99_b",
+                            "op_62"
+                          ],
+                          "start": 8,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 12,
+                          "index": "op_63",
+                          "memory": "op_0",
+                          "name": "op_64",
+                          "op_type": "load",
+                          "start": 11
+                        },
+                        {
+                          "end": 14,
+                          "name": "op_65",
+                          "op_type": "add",
+                          "operands": [
+                            "op_55",
+                            "op_64"
+                          ],
+                          "start": 13,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 16,
+                          "name": "op_66",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_65",
+                            "op_3"
+                          ],
+                          "start": 13,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 18,
+                          "name": "op_67",
+                          "op_type": "add",
+                          "operands": [
+                            "op_45",
+                            "op_66"
+                          ],
+                          "start": 17,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 5,
+                          "name": "op_69",
+                          "op_type": "add",
+                          "operands": [
+                            "op_99_b",
+                            "op_68"
+                          ],
+                          "start": 4,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 6,
+                          "name": "op_71",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_103_b",
+                            "op_70"
+                          ],
+                          "start": 4,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 7,
+                          "name": "op_72",
+                          "op_type": "add",
+                          "operands": [
+                            "op_101_b",
+                            "op_71"
+                          ],
+                          "start": 6,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 8,
+                          "name": "op_74",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_72",
+                            "op_73"
+                          ],
+                          "start": 6,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 9,
+                          "name": "op_75",
+                          "op_type": "add",
+                          "operands": [
+                            "op_69",
+                            "op_74"
+                          ],
+                          "start": 8,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 10,
+                          "index": "op_75",
+                          "memory": "op_0",
+                          "name": "op_76",
+                          "op_type": "load",
+                          "start": 9
+                        },
+                        {
+                          "end": 12,
+                          "name": "op_77",
+                          "op_type": "sub",
+                          "operands": [
+                            "op_76",
+                            "op_33"
+                          ],
+                          "start": 11,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 5,
+                          "name": "op_79",
+                          "op_type": "add",
+                          "operands": [
+                            "op_99_b",
+                            "op_78"
+                          ],
+                          "start": 4,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 6,
+                          "name": "op_81",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_103_b",
+                            "op_80"
+                          ],
+                          "start": 4,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 7,
+                          "name": "op_82",
+                          "op_type": "add",
+                          "operands": [
+                            "op_101_b",
+                            "op_81"
+                          ],
+                          "start": 6,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 8,
+                          "name": "op_84",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_82",
+                            "op_83"
+                          ],
+                          "start": 6,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 9,
+                          "name": "op_85",
+                          "op_type": "add",
+                          "operands": [
+                            "op_79",
+                            "op_84"
+                          ],
+                          "start": 8,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 9,
+                          "index": "op_85",
+                          "memory": "op_0",
+                          "name": "op_86",
+                          "op_type": "load",
+                          "start": 8
+                        },
+                        {
+                          "end": 12,
+                          "name": "op_87",
+                          "op_type": "add",
+                          "operands": [
+                            "op_77",
+                            "op_86"
+                          ],
+                          "start": 11,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 14,
+                          "name": "op_88",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_87",
+                            "op_3"
+                          ],
+                          "start": 11,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 18,
+                          "name": "op_89",
+                          "op_type": "add",
+                          "operands": [
+                            "op_67",
+                            "op_88"
+                          ],
+                          "start": 17,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 18,
+                          "name": "op_90",
+                          "op_type": "add",
+                          "operands": [
+                            "op_89",
+                            "op_31"
+                          ],
+                          "start": 17,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 6,
+                          "name": "op_92",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_103_b",
+                            "op_91"
+                          ],
+                          "start": 4,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 7,
+                          "name": "op_93",
+                          "op_type": "add",
+                          "operands": [
+                            "op_101_b",
+                            "op_92"
+                          ],
+                          "start": 6,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 8,
+                          "name": "op_95",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_93",
+                            "op_94"
+                          ],
+                          "start": 6,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 9,
+                          "name": "op_96",
+                          "op_type": "add",
+                          "operands": [
+                            "op_99_b",
+                            "op_95"
+                          ],
+                          "start": 8,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 18,
+                          "index": "op_96",
+                          "memory": "op_1",
+                          "op_type": "store",
+                          "start": 17,
+                          "value": "op_90"
+                        },
+                        {
+                          "jump": 3,
+                          "op_type": "yield",
+                          "operands": [],
+                          "time": 18
+                        }
+                      ],
+                      "end": 18,
+                      "iter_args": [],
+                      "iter_inits": [],
+                      "iter_name": "op_99_b",
+                      "lb": "op_13",
+                      "names": [],
+                      "op_type": "for",
+                      "start": 3,
+                      "step": "op_15",
+                      "ub": "new_constant_3"
+                    },
+                    {
+                      "jump": 2,
+                      "op_type": "yield",
+                      "operands": [],
+                      "time": 20
+                    }
+                  ],
+                  "end": 20,
+                  "iter_args": [],
+                  "iter_inits": [],
+                  "iter_name": "op_101_b",
+                  "lb": "op_10",
+                  "names": [],
+                  "op_type": "for",
+                  "start": 2,
+                  "step": "op_12",
+                  "ub": "new_constant_4"
+                },
+                {
+                  "jump": 1,
+                  "op_type": "yield",
+                  "operands": [],
+                  "time": 22
+                }
+              ],
+              "end": 22,
+              "iter_args": [],
+              "iter_inits": [],
+              "iter_name": "op_103_b",
+              "lb": "op_7",
+              "names": [],
+              "op_type": "for",
+              "start": 1,
+              "step": "op_9",
+              "ub": "new_constant_5"
+            },
+            {
+              "body": [
+                {
+                  "body": [
+                    {
+                      "body": [
+                        {
+                          "end": 28,
+                          "name": "op_114",
+                          "op_type": "add",
+                          "operands": [
+                            "op_200_b",
+                            "op_113"
+                          ],
+                          "start": 27,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 29,
+                          "name": "op_116",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_114",
+                            "op_115"
+                          ],
+                          "start": 27,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 30,
+                          "name": "op_117",
+                          "op_type": "add",
+                          "operands": [
+                            "op_198_b",
+                            "op_116"
+                          ],
+                          "start": 29,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 31,
+                          "name": "op_119",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_117",
+                            "op_118"
+                          ],
+                          "start": 29,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 32,
+                          "name": "op_120",
+                          "op_type": "add",
+                          "operands": [
+                            "op_196_b",
+                            "op_119"
+                          ],
+                          "start": 31,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 38,
+                          "index": "op_120",
+                          "memory": "op_1",
+                          "name": "op_121",
+                          "op_type": "load",
+                          "start": 37
+                        },
+                        {
+                          "end": 29,
+                          "name": "op_123",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_200_b",
+                            "op_122"
+                          ],
+                          "start": 27,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 30,
+                          "name": "op_124",
+                          "op_type": "add",
+                          "operands": [
+                            "op_198_b",
+                            "op_123"
+                          ],
+                          "start": 29,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 31,
+                          "name": "op_126",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_124",
+                            "op_125"
+                          ],
+                          "start": 29,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 32,
+                          "name": "op_127",
+                          "op_type": "add",
+                          "operands": [
+                            "op_196_b",
+                            "op_126"
+                          ],
+                          "start": 31,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 34,
+                          "index": "op_127",
+                          "memory": "op_1",
+                          "name": "op_128",
+                          "op_type": "load",
+                          "start": 33
+                        },
+                        {
+                          "end": 35,
+                          "name": "op_130",
+                          "op_type": "shift_left",
+                          "operands": [
+                            "op_128",
+                            "op_129"
+                          ],
+                          "start": 34,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 39,
+                          "name": "op_131",
+                          "op_type": "sub",
+                          "operands": [
+                            "op_121",
+                            "op_130"
+                          ],
+                          "start": 38,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 28,
+                          "name": "op_133",
+                          "op_type": "add",
+                          "operands": [
+                            "op_200_b",
+                            "op_132"
+                          ],
+                          "start": 27,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 29,
+                          "name": "op_135",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_133",
+                            "op_134"
+                          ],
+                          "start": 27,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 30,
+                          "name": "op_136",
+                          "op_type": "add",
+                          "operands": [
+                            "op_198_b",
+                            "op_135"
+                          ],
+                          "start": 29,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 31,
+                          "name": "op_138",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_136",
+                            "op_137"
+                          ],
+                          "start": 29,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 32,
+                          "name": "op_139",
+                          "op_type": "add",
+                          "operands": [
+                            "op_196_b",
+                            "op_138"
+                          ],
+                          "start": 31,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 37,
+                          "index": "op_139",
+                          "memory": "op_1",
+                          "name": "op_140",
+                          "op_type": "load",
+                          "start": 36
+                        },
+                        {
+                          "end": 39,
+                          "name": "op_141",
+                          "op_type": "add",
+                          "operands": [
+                            "op_131",
+                            "op_140"
+                          ],
+                          "start": 38,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 40,
+                          "name": "op_142",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_141",
+                            "op_3"
+                          ],
+                          "start": 38,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 28,
+                          "name": "op_144",
+                          "op_type": "add",
+                          "operands": [
+                            "op_198_b",
+                            "op_143"
+                          ],
+                          "start": 27,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 29,
+                          "name": "op_146",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_200_b",
+                            "op_145"
+                          ],
+                          "start": 27,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 30,
+                          "name": "op_147",
+                          "op_type": "add",
+                          "operands": [
+                            "op_144",
+                            "op_146"
+                          ],
+                          "start": 29,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 31,
+                          "name": "op_149",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_147",
+                            "op_148"
+                          ],
+                          "start": 29,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 32,
+                          "name": "op_150",
+                          "op_type": "add",
+                          "operands": [
+                            "op_196_b",
+                            "op_149"
+                          ],
+                          "start": 31,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 36,
+                          "index": "op_150",
+                          "memory": "op_1",
+                          "name": "op_151",
+                          "op_type": "load",
+                          "start": 35
+                        },
+                        {
+                          "end": 37,
+                          "name": "op_152",
+                          "op_type": "sub",
+                          "operands": [
+                            "op_151",
+                            "op_130"
+                          ],
+                          "start": 36,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 28,
+                          "name": "op_154",
+                          "op_type": "add",
+                          "operands": [
+                            "op_198_b",
+                            "op_153"
+                          ],
+                          "start": 27,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 29,
+                          "name": "op_156",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_200_b",
+                            "op_155"
+                          ],
+                          "start": 27,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 30,
+                          "name": "op_157",
+                          "op_type": "add",
+                          "operands": [
+                            "op_154",
+                            "op_156"
+                          ],
+                          "start": 29,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 31,
+                          "name": "op_159",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_157",
+                            "op_158"
+                          ],
+                          "start": 29,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 32,
+                          "name": "op_160",
+                          "op_type": "add",
+                          "operands": [
+                            "op_196_b",
+                            "op_159"
+                          ],
+                          "start": 31,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 35,
+                          "index": "op_160",
+                          "memory": "op_1",
+                          "name": "op_161",
+                          "op_type": "load",
+                          "start": 34
+                        },
+                        {
+                          "end": 37,
+                          "name": "op_162",
+                          "op_type": "add",
+                          "operands": [
+                            "op_152",
+                            "op_161"
+                          ],
+                          "start": 36,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 39,
+                          "name": "op_163",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_162",
+                            "op_3"
+                          ],
+                          "start": 36,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 41,
+                          "name": "op_164",
+                          "op_type": "add",
+                          "operands": [
+                            "op_142",
+                            "op_163"
+                          ],
+                          "start": 40,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 28,
+                          "name": "op_166",
+                          "op_type": "add",
+                          "operands": [
+                            "op_196_b",
+                            "op_165"
+                          ],
+                          "start": 27,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 29,
+                          "name": "op_168",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_200_b",
+                            "op_167"
+                          ],
+                          "start": 27,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 30,
+                          "name": "op_169",
+                          "op_type": "add",
+                          "operands": [
+                            "op_198_b",
+                            "op_168"
+                          ],
+                          "start": 29,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 31,
+                          "name": "op_171",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_169",
+                            "op_170"
+                          ],
+                          "start": 29,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 32,
+                          "name": "op_172",
+                          "op_type": "add",
+                          "operands": [
+                            "op_166",
+                            "op_171"
+                          ],
+                          "start": 31,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 33,
+                          "index": "op_172",
+                          "memory": "op_1",
+                          "name": "op_173",
+                          "op_type": "load",
+                          "start": 32
+                        },
+                        {
+                          "end": 35,
+                          "name": "op_174",
+                          "op_type": "sub",
+                          "operands": [
+                            "op_173",
+                            "op_130"
+                          ],
+                          "start": 34,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 28,
+                          "name": "op_176",
+                          "op_type": "add",
+                          "operands": [
+                            "op_196_b",
+                            "op_175"
+                          ],
+                          "start": 27,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 29,
+                          "name": "op_178",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_200_b",
+                            "op_177"
+                          ],
+                          "start": 27,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 30,
+                          "name": "op_179",
+                          "op_type": "add",
+                          "operands": [
+                            "op_198_b",
+                            "op_178"
+                          ],
+                          "start": 29,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 31,
+                          "name": "op_181",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_179",
+                            "op_180"
+                          ],
+                          "start": 29,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 32,
+                          "name": "op_182",
+                          "op_type": "add",
+                          "operands": [
+                            "op_176",
+                            "op_181"
+                          ],
+                          "start": 31,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 32,
+                          "index": "op_182",
+                          "memory": "op_1",
+                          "name": "op_183",
+                          "op_type": "load",
+                          "start": 31
+                        },
+                        {
+                          "end": 35,
+                          "name": "op_184",
+                          "op_type": "add",
+                          "operands": [
+                            "op_174",
+                            "op_183"
+                          ],
+                          "start": 34,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 37,
+                          "name": "op_185",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_184",
+                            "op_3"
+                          ],
+                          "start": 34,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 41,
+                          "name": "op_186",
+                          "op_type": "add",
+                          "operands": [
+                            "op_164",
+                            "op_185"
+                          ],
+                          "start": 40,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 41,
+                          "name": "op_187",
+                          "op_type": "add",
+                          "operands": [
+                            "op_186",
+                            "op_128"
+                          ],
+                          "start": 40,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 29,
+                          "name": "op_189",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_200_b",
+                            "op_188"
+                          ],
+                          "start": 27,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 30,
+                          "name": "op_190",
+                          "op_type": "add",
+                          "operands": [
+                            "op_198_b",
+                            "op_189"
+                          ],
+                          "start": 29,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 31,
+                          "name": "op_192",
+                          "op_type": "mul",
+                          "operands": [
+                            "op_190",
+                            "op_191"
+                          ],
+                          "start": 29,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 32,
+                          "name": "op_193",
+                          "op_type": "add",
+                          "operands": [
+                            "op_196_b",
+                            "op_192"
+                          ],
+                          "start": 31,
+                          "type": "i32"
+                        },
+                        {
+                          "end": 41,
+                          "index": "op_193",
+                          "memory": "op_0",
+                          "op_type": "store",
+                          "start": 40,
+                          "value": "op_187"
+                        },
+                        {
+                          "jump": 26,
+                          "op_type": "yield",
+                          "operands": [],
+                          "time": 41
+                        }
+                      ],
+                      "end": 41,
+                      "iter_args": [],
+                      "iter_inits": [],
+                      "iter_name": "op_196_b",
+                      "lb": "op_110",
+                      "names": [],
+                      "op_type": "for",
+                      "start": 26,
+                      "step": "op_112",
+                      "ub": "new_constant_0"
+                    },
+                    {
+                      "jump": 25,
+                      "op_type": "yield",
+                      "operands": [],
+                      "time": 43
+                    }
+                  ],
+                  "end": 43,
+                  "iter_args": [],
+                  "iter_inits": [],
+                  "iter_name": "op_198_b",
+                  "lb": "op_107",
+                  "names": [],
+                  "op_type": "for",
+                  "start": 25,
+                  "step": "op_109",
+                  "ub": "new_constant_1"
+                },
+                {
+                  "jump": 24,
+                  "op_type": "yield",
+                  "operands": [],
+                  "time": 45
+                }
+              ],
+              "end": 45,
+              "iter_args": [],
+              "iter_inits": [],
+              "iter_name": "op_200_b",
+              "lb": "op_104",
+              "names": [],
+              "op_type": "for",
+              "start": 24,
+              "step": "op_106",
+              "ub": "new_constant_2"
+            },
+            {
+              "jump": 0,
+              "op_type": "yield",
+              "operands": [],
+              "time": 47
+            }
+          ],
+          "end": 47,
+          "iter_args": [],
+          "iter_inits": [],
+          "iter_name": "op_202_b",
+          "lb": "op_4",
+          "names": [],
+          "op_type": "for",
+          "start": 0,
+          "step": "op_6",
+          "ub": "new_constant_6"
+        },
+        {
+          "op_type": "return",
+          "operands": [],
+          "time": 49
+        }
+      ],
+      "graph": {
+        "edge": [
+          {
+            "from": 0,
+            "to": 1,
+            "type": "static"
+          },
+          {
+            "from": 1,
+            "to": 2,
+            "type": "static"
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "type": "static"
+          },
+          {
+            "from": 3,
+            "to": 4,
+            "type": "static"
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "type": "static:1"
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "type": "static:2"
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "type": "static:1"
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "type": "static:2"
+          },
+          {
+            "from": 8,
+            "to": 9,
+            "type": "static:1"
+          },
+          {
+            "from": 9,
+            "to": 10,
+            "type": "static:1"
+          },
+          {
+            "from": 10,
+            "to": 11,
+            "type": "static:1"
+          },
+          {
+            "from": 11,
+            "to": 12,
+            "type": "static:1"
+          },
+          {
+            "from": 12,
+            "to": 13,
+            "type": "static:1"
+          },
+          {
+            "from": 13,
+            "to": 14,
+            "type": "static:1"
+          },
+          {
+            "from": 14,
+            "to": 15,
+            "type": "static:1"
+          },
+          {
+            "from": 15,
+            "to": 16,
+            "type": "static:1"
+          },
+          {
+            "from": 16,
+            "to": 17,
+            "type": "static:2"
+          },
+          {
+            "from": 17,
+            "to": 18,
+            "type": "static:1"
+          },
+          {
+            "from": 3,
+            "to": 19,
+            "type": "static-for"
+          },
+          {
+            "from": 19,
+            "to": 20,
+            "type": "static"
+          },
+          {
+            "from": 2,
+            "to": 21,
+            "type": "static-for"
+          },
+          {
+            "from": 21,
+            "to": 22,
+            "type": "static"
+          },
+          {
+            "from": 1,
+            "to": 23,
+            "type": "static-for"
+          },
+          {
+            "from": 23,
+            "to": 24,
+            "type": "static"
+          },
+          {
+            "from": 24,
+            "to": 25,
+            "type": "static"
+          },
+          {
+            "from": 25,
+            "to": 26,
+            "type": "static"
+          },
+          {
+            "from": 26,
+            "to": 27,
+            "type": "static"
+          },
+          {
+            "from": 27,
+            "to": 28,
+            "type": "static:1"
+          },
+          {
+            "from": 28,
+            "to": 29,
+            "type": "static:2"
+          },
+          {
+            "from": 29,
+            "to": 30,
+            "type": "static:1"
+          },
+          {
+            "from": 30,
+            "to": 31,
+            "type": "static:2"
+          },
+          {
+            "from": 31,
+            "to": 32,
+            "type": "static:1"
+          },
+          {
+            "from": 32,
+            "to": 33,
+            "type": "static:1"
+          },
+          {
+            "from": 33,
+            "to": 34,
+            "type": "static:1"
+          },
+          {
+            "from": 34,
+            "to": 35,
+            "type": "static:1"
+          },
+          {
+            "from": 35,
+            "to": 36,
+            "type": "static:1"
+          },
+          {
+            "from": 36,
+            "to": 37,
+            "type": "static:1"
+          },
+          {
+            "from": 37,
+            "to": 38,
+            "type": "static:1"
+          },
+          {
+            "from": 38,
+            "to": 39,
+            "type": "static:1"
+          },
+          {
+            "from": 39,
+            "to": 40,
+            "type": "static:2"
+          },
+          {
+            "from": 40,
+            "to": 41,
+            "type": "static:1"
+          },
+          {
+            "from": 26,
+            "to": 42,
+            "type": "static-for"
+          },
+          {
+            "from": 42,
+            "to": 43,
+            "type": "static"
+          },
+          {
+            "from": 25,
+            "to": 44,
+            "type": "static-for"
+          },
+          {
+            "from": 44,
+            "to": 45,
+            "type": "static"
+          },
+          {
+            "from": 24,
+            "to": 46,
+            "type": "static-for"
+          },
+          {
+            "from": 46,
+            "to": 47,
+            "type": "static"
+          },
+          {
+            "from": 0,
+            "to": 48,
+            "type": "static-for"
+          },
+          {
+            "from": 48,
+            "to": 49,
+            "type": "static"
+          }
+        ],
+        "end": 49,
+        "start": 0
+      },
+      "name": "main",
+      "ret_types": [],
+      "return_vals": [],
+      "strategy": "static",
+      "types": []
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "level": "software",
+  "memory": [
+    {
+      "name": "op_0",
+      "size": 1666,
+      "type": "f64"
+    },
+    {
+      "name": "op_1",
+      "size": 1666,
+      "type": "i32"
+    },
+    {
+      "name": "op_2",
+      "size": 495,
+      "type": "i32"
+    },
+    {
+      "name": "op_3",
+      "size": 494,
+      "type": "f64"
+    },
+    {
+      "name": "op_4",
+      "size": 494,
+      "type": "f64"
+    }
+  ],
+  "modules": [
+    {
+      "args": [],
+      "body": [
+        {
+          "name": "op_5",
+          "op_type": "constant",
+          "operands": [
+            "1"
+          ],
+          "type": "i32"
+        },
+        {
+          "name": "op_6",
+          "op_type": "constant",
+          "operands": [
+            "0"
+          ],
+          "type": "i32"
+        },
+        {
+          "name": "op_7",
+          "op_type": "constant",
+          "operands": [
+            "494"
+          ],
+          "type": "i32"
+        },
+        {
+          "name": "op_8",
+          "op_type": "constant",
+          "operands": [
+            "493"
+          ],
+          "type": "i32"
+        },
+        {
+          "name": "op_9",
+          "op_type": "constant",
+          "operands": [
+            "0"
+          ],
+          "type": "i32"
+        },
+        {
+          "body": [
+            {
+              "name": "op_10",
+              "op_type": "sitofp",
+              "operands": [
+                "op_9"
+              ],
+              "type": "f64"
+            },
+            {
+              "index": "op_31",
+              "memory": "op_2",
+              "name": "op_11",
+              "op_type": "load"
+            },
+            {
+              "name": "op_12",
+              "op_type": "add",
+              "operands": [
+                "op_31",
+                "op_5"
+              ],
+              "type": "i32"
+            },
+            {
+              "index": "op_12",
+              "memory": "op_2",
+              "name": "op_13",
+              "op_type": "load"
+            },
+            {
+              "name": "op_14",
+              "op_type": "index_cast",
+              "operands": [
+                "op_13"
+              ],
+              "type": "i32"
+            },
+            {
+              "name": "op_15",
+              "op_type": "sub",
+              "operands": [
+                "op_14",
+                "op_5"
+              ],
+              "type": "i32"
+            },
+            {
+              "name": "op_16",
+              "op_type": "index_cast",
+              "operands": [
+                "op_11"
+              ],
+              "type": "i32"
+            },
+            {
+              "body": [
+                {
+                  "name": "op_17",
+                  "op_type": "sub",
+                  "operands": [
+                    "op_28_0",
+                    "op_16"
+                  ],
+                  "type": "i32"
+                },
+                {
+                  "name": "op_18",
+                  "op_type": "index_cast",
+                  "operands": [
+                    "op_17"
+                  ],
+                  "type": "i32"
+                },
+                {
+                  "name": "op_19",
+                  "op_type": "add",
+                  "operands": [
+                    "op_18",
+                    "op_11"
+                  ],
+                  "type": "i32"
+                },
+                {
+                  "name": "op_20",
+                  "op_type": "index_cast",
+                  "operands": [
+                    "op_19"
+                  ],
+                  "type": "i32"
+                },
+                {
+                  "index": "op_20",
+                  "memory": "op_0",
+                  "name": "op_21",
+                  "op_type": "load"
+                },
+                {
+                  "index": "op_20",
+                  "memory": "op_1",
+                  "name": "op_22",
+                  "op_type": "load"
+                },
+                {
+                  "name": "op_23",
+                  "op_type": "index_cast",
+                  "operands": [
+                    "op_22"
+                  ],
+                  "type": "i32"
+                },
+                {
+                  "index": "op_23",
+                  "memory": "op_3",
+                  "name": "op_24",
+                  "op_type": "load"
+                },
+                {
+                  "name": "op_25",
+                  "op_type": "mul",
+                  "operands": [
+                    "op_21",
+                    "op_24"
+                  ],
+                  "type": "f64"
+                },
+                {
+                  "name": "op_26",
+                  "op_type": "add",
+                  "operands": [
+                    "op_28_1",
+                    "op_25"
+                  ],
+                  "type": "f64"
+                },
+                {
+                  "op_type": "yield",
+                  "operands": [
+                    "op_26"
+                  ]
+                }
+              ],
+              "iter_args": [
+                "op_28_1"
+              ],
+              "iter_inits": [
+                "op_10"
+              ],
+              "iter_name": "op_28_0",
+              "lb": "op_16",
+              "names": [
+                "op_28"
+              ],
+              "op_type": "for",
+              "step": "op_5",
+              "ub": "op_15"
+            },
+            {
+              "index": "op_31",
+              "memory": "op_4",
+              "op_type": "store",
+              "value": "op_28"
+            },
+            {
+              "op_type": "yield",
+              "operands": []
+            }
+          ],
+          "iter_args": [],
+          "iter_inits": [],
+          "iter_name": "op_31",
+          "lb": "op_6",
+          "names": [],
+          "op_type": "for",
+          "step": "op_5",
+          "ub": "op_8"
+        },
+        {
+          "op_type": "return",
+          "operands": []
+        }
+      ],
+      "name": "main",
+      "types": []
+    }
+  ]
+}
